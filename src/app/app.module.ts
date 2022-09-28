@@ -20,12 +20,20 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
 import { DriversComponent } from './parking/pages/drivers/drivers.component';
 import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
+import { ParkingGraphsComponent } from './parking/pages/parking-graphs/parking-graphs.component';
+import { ProfilesComponent } from './parking/pages/profiles/profiles.component';
+import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
+import { ParkingPaymentComponent } from './parking/pages/parking-payment/parking-payment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DriversComponent,
-    ParkingLotsComponent
+    ParkingLotsComponent,
+    ParkingGraphsComponent,
+    ProfilesComponent,
+    PageNotFoundComponent,
+    ParkingPaymentComponent
   ],
   imports: [
     BrowserModule,

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Web-Application';
+  options = [
+    { path: '/parking-lots', title: 'Search Parking'},
+    { path: '/parking-graphs', title: 'Parking Graphs'},
+    { path: '/profile', title: 'Profile'}
+  ]
 }
