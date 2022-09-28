@@ -24,6 +24,7 @@ import { ParkingGraphsComponent } from './parking/pages/parking-graphs/parking-g
 import { ProfilesComponent } from './parking/pages/profiles/profiles.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { ParkingPaymentComponent } from './parking/pages/parking-payment/parking-payment.component';
+import{NgApexchartsModule} from "ng-apexcharts";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ParkingPaymentComponent } from './parking/pages/parking-payment/parking
     ParkingPaymentComponent
   ],
   imports: [
+NgApexchartsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
