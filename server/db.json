@@ -123,5 +123,55 @@
       "EndTime": "14:00",
       "NumberHours": 4
     }
+  ],
+  "users": [
+    {
+      "email": "123@gmail.com",
+      "password": "$2a$10$hCtekD.ZvXijA96lNvUyBujJzZPSj72NlU7DkSKavrsvZ37g1E2Ny",
+      "gender": "male",
+      "firstName": "Luis",
+      "lastName": "Li",
+      "phone": 966484081,
+      "brand": "123",
+      "area": "123",
+      "type": "technician",
+      "id": 7
+    },
+    {
+      "email": "empresa@gmail.com",
+      "password": "$2a$10$4R4/mpKZYqkAQAUAZIovSeHGfeiUYkq5OHhn8tQuQ/etdpbwAs/Gy",
+      "name": "Devy",
+      "address": "San Borja",
+      "subscription": "plus",
+      "phone": 123,
+      "creditCard": "qw4e",
+      "creditCardCVV": "1423",
+      "type": "business",
+      "id": 8
+    },
+    {
+      "email": "cokijlmf@gmail.com",
+      "password": "$2a$10$k3jU8MrKfGX0tClNHR2dCuxArSTcFhKQY.QLRSPFNq1z/WvC9PMOu",
+      "name": "Jorge",
+      "address": "",
+      "subscription": "normal",
+      "phone": 1,
+      "creditCard": "4555894722360123",
+      "creditCardCVV": "497",
+      "type": "business",
+      "id": 9
+    },
+    {
+      "email": "cokijlmf@outlook.com",
+      "password": "$2a$10$Cqhk9TNNz.MU7ZwOOK/fS.8trJ1ClvteTpuItVZv/iMeNAfCbXwhW",
+      "gender": "male",
+      "firstName": "Antonio",
+      "lastName": "Lopez",
+      "phone": 2,
+      "brand": "",
+      "area": "Laptop",
+      "type": "technician",
+      "id": 10
+    }
   ]
 }
