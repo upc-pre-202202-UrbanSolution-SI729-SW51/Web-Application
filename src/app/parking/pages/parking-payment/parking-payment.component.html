@@ -1,1 +1,20 @@
-<p>parking-payment works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Hi Frank</mat-card-title>
+      <mat-card-subtitle>This is the parking that I will rent</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Parking: Jockey</p>
+      <p>Booking hours: 5</p>
+      <p>Status: Free</p>
+      <p>Cost: $15</p>
+    </mat-card-content>
+    <mat-card-footer style="padding-right: 40px">
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">Pay</button>
+        <button mat-button (click)="navigateToHome()" color="warn">Back</button>
+      </mat-card-actions>
+    </mat-card-footer>
+  </mat-card>
+</div>
