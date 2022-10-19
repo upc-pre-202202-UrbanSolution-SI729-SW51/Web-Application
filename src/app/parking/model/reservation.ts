@@ -6,4 +6,5 @@ export interface Reservation {
     ParkingLot: ParkingLot;
     Driver: Driver;
     total: number;
+    parkingHours: number;
 }
