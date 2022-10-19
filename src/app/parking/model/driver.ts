@@ -4,4 +4,5 @@ export interface Driver {
   birthDate: string;
   creditCard: string;
   numberCreditCard: string;
+  parkingHours: number;
 }
