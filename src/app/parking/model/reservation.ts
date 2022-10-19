@@ -5,4 +5,5 @@ export interface Reservation {
     id: number;
     ParkingLot: ParkingLot;
     Driver: Driver;
+    total: number;
 }
