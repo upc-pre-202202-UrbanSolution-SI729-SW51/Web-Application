@@ -9,6 +9,7 @@ import {ReservationComponent} from "./parking/pages/reservation/reservation.comp
 const routes: Routes = [
   { path: 'parking-lots', component: ParkingLotsComponent},
   { path: 'reservation-history', component: ReservationHistoryComponent},
+  {path: 'reservation', component: ReservationComponent},
   { path: '', redirectTo: 'parking-lots', pathMatch: 'full'},
   {path:'reservation', component:ReservationComponent},
   { path: '**', component: PageNotFoundComponent }

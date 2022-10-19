@@ -46,8 +46,12 @@ export class ParkingLotsComponent implements OnInit,AfterViewInit {
 
   }
 
+
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+  }
+  navigateToHome() {
+    this.router.navigate(['reservation']);
   }
 
   navigateToReservation() {

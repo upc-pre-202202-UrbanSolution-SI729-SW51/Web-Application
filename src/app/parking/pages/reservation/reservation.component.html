@@ -1,1 +1,74 @@
-<p>reservation works!</p>
+<mat-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Information Parking</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+            </mat-form-field>
+            <div>
+                <button mat-raised-button color="primary" matStepperNext>CONTINUE</button>
+                <button mat-stroked-button color="warn">BACK</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Reservation</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Marina Velez Perez"
+                       required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Birth Day</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="17/02/1993"
+                       required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Your Hours</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="2,3,4,5"
+                       required>
+            </mat-form-field>
+            <div>
+                <button mat-raised-button color="primary" matStepperNext>CONTINUE</button>
+                <button mat-stroked-button color="warn">Back</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Payment</ng-template>
+        <mat-form-field appearance="fill">
+            <mat-label>Credit Card Type</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let card of card" [value]="card.value">
+                    {{card.type}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Number Credit Card</mat-label>
+            <input matInput placeholder="3412123412341234"
+                   required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Expiration Date</mat-label>
+            <input matInput placeholder="11/23"
+                   required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>CVI</mat-label>
+            <input matInput placeholder="092"
+                   required>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <button mat-stroked-button>PayPal</button>
+        <button mat-stroked-button>Pay Online</button>
+        <button mat-stroked-button>Cash Payment</button>
+        <div>
+            <button mat-raised-button color="primary">DONE</button>
+            <button mat-stroked-button color="warn">BACK</button>
+        </div>
+    </mat-step>
+</mat-stepper>
