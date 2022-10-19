@@ -23,6 +23,8 @@ import{NgApexchartsModule} from "ng-apexcharts";
 import { ReservationComponent } from './parking/pages/reservation/reservation.component';
 import { ReservationHistoryComponent } from './parking/pages/reservation-history/reservation-history.component';
 import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.service";
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -32,26 +34,28 @@ import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.s
     ReservationComponent,
     ReservationHistoryComponent
   ],
-  imports: [
-NgApexchartsModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSortModule,
-    MatCardModule,
-    MatGridListModule,
-    MatDividerModule
-  ],
+    imports: [
+        NgApexchartsModule,
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatInputModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSortModule,
+        MatCardModule,
+        MatGridListModule,
+        MatDividerModule,
+        MatStepperModule,
+        MatSelectModule
+    ],
   providers: [ParkingLotsService],
   bootstrap: [AppComponent]
 })
