@@ -13,6 +13,6 @@ export class ParkingLotsComponent implements OnInit {
   ngOnInit(): void {
   }
   navigateToHome() {
-    this.router.navigate(['parking-payment']);
+    this.router.navigate(['reservation']);
   }
 }
