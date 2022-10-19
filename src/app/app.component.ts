@@ -9,7 +9,6 @@ export class AppComponent {
   title = 'Web-Application';
   options = [
     { path: '/parking-lots', title: ''},
-    { path: '/reservation', title: 'Reservation History'},
-    { path: '/profile', title: 'Profile'}
+    { path: '/reservation-history', title: 'Reservation History'}
   ]
 }
