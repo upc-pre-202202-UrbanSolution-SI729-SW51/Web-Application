@@ -123,5 +123,17 @@
       "EndTime": "14:00",
       "NumberHours": 4
     }
+  ],
+  "ParkingHistory": [
+  {
+    "id": 1,
+    "Reservation_id": 1,
+    "Name": "Eclair",
+    "NameOfParking": "262",
+    "Location": "16",
+    "HoursOfState": 23,
+    "CostHours": 6,
+    "Total": 6
+  }
   ]
 }
