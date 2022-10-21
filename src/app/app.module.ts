@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {DriversService} from "./parking/services/drivers.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatTableModule} from "@angular/material/table";
@@ -18,45 +17,48 @@ import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
-import { DriversComponent } from './parking/pages/drivers/drivers.component';
 import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
-import { ParkingGraphsComponent } from './parking/pages/parking-graphs/parking-graphs.component';
-import { ProfilesComponent } from './parking/pages/profiles/profiles.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
-import { ParkingPaymentComponent } from './parking/pages/parking-payment/parking-payment.component';
 import{NgApexchartsModule} from "ng-apexcharts";
+import { ReservationComponent } from './parking/pages/reservation/reservation.component';
+import { ReservationHistoryComponent } from './parking/pages/reservation-history/reservation-history.component';
+import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.service";
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatSelectModule} from "@angular/material/select";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DriversComponent,
     ParkingLotsComponent,
-    ParkingGraphsComponent,
-    ProfilesComponent,
     PageNotFoundComponent,
-    ParkingPaymentComponent
+    ReservationComponent,
+    ReservationHistoryComponent
   ],
-  imports: [
-NgApexchartsModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSortModule,
-    MatCardModule,
-    MatGridListModule,
-    MatDividerModule
-  ],
-  providers: [DriversService],
+    imports: [
+        NgApexchartsModule,
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatInputModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSortModule,
+        MatCardModule,
+        MatGridListModule,
+        MatDividerModule,
+        MatStepperModule,
+        MatSelectModule,
+        MatSidenavModule
+    ],
+  providers: [ParkingLotsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
