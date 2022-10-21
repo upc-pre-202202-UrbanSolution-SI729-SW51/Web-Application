@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'reservation-history', component: ReservationHistoryComponent},
   {path: 'reservation', component: ReservationComponent},
   { path: '', redirectTo: 'parking-lots', pathMatch: 'full'},
+  {path:'reservation', component:ReservationComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

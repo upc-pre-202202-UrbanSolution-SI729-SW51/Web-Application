@@ -25,6 +25,7 @@ import { ReservationHistoryComponent } from './parking/pages/reservation-history
 import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.service";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {MatSelectModule} from "@angular/material/select";
         MatGridListModule,
         MatDividerModule,
         MatStepperModule,
-        MatSelectModule
+        MatSelectModule,
+        MatSidenavModule
     ],
   providers: [ParkingLotsService],
   bootstrap: [AppComponent]

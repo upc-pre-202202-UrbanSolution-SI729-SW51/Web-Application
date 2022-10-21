@@ -40,40 +40,40 @@
     {
       "id": 1,
       "name": "Parking jockey",
-      "Location": "Av.Javier Prado",
-      "HoursOfAttention": "9:00-24:00",
-      "CostHours": 3
+      "location": "Av.Javier Prado",
+      "hoursOfAttention": "9:00-24:00",
+      "costHours": 3
     },
     {
       "id": 2,
       "name": "Parking Mega plaza",
-      "Location": "Av.via expresa",
-      "HoursOfAttention": "9:00-24:00",
-      "CostHours": 3
+      "location": "Av.via expresa",
+      "hoursOfAttention": "9:00-24:00",
+      "costHours": 3
 
     },
     {
       "id": 3,
       "name": "Mall de sur",
-      "Location": "Carretera central km 23",
-      "HoursOfAttention": "9:00-24:00",
-      "CostHours": 3
+      "location": "Carretera central km 23",
+      "hoursOfAttention": "9:00-24:00",
+      "costHours": 3
 
     },
     {
       "id": 4,
       "name": "Mall santa anita",
-      "Location": "Av.Carretera Central km 13",
-      "HoursOfAttention": "9:00-24:00",
-      "CostHours": 5
+      "location": "Av.Carretera Central km 13",
+      "hoursOfAttention": "9:00-24:00",
+      "costHours": 5
 
     },
     {
       "id": 5,
       "name": "Rambla",
-      "Location": "Av.Javier Prado",
-      "HoursOfAttention": "9:00-24:00",
-      "CostHours": 2
+      "location": "Av.Javier Prado",
+      "hoursOfAttention": "9:00-24:00",
+      "costHours": 2
 
     }
   ],
@@ -123,5 +123,17 @@
       "EndTime": "14:00",
       "NumberHours": 4
     }
+  ],
+  "ParkingHistory": [
+  {
+    "id": 1,
+    "Reservation_id": 1,
+    "Name": "Eclair",
+    "NameOfParking": "262",
+    "Location": "16",
+    "HoursOfState": 23,
+    "CostHours": 6,
+    "Total": 6
+  }
   ]
 }
