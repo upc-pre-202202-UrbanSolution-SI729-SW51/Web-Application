@@ -9,4 +9,5 @@ export interface ReservationHistory {
     HoursOfState:number;
     CostHours:number;
     Total:number;
+    Reservation: Reservation;
 }
