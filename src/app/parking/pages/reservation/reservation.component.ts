@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 interface Card {
   value: string;
@@ -21,14 +22,18 @@ export class ReservationComponent implements OnInit {
   });
 
   card: Card[] = [
-    {value: 'steak-0', type: 'Steak'},
-    {value: 'pizza-1', type: 'Pizza'},
-    {value: 'pizza-1', type: 'Tacos'},
+    {value: '0', type: 'Visa'},
+    {value: '1', type: 'Debit'},
+    {value: '1', type: 'Mastercard'},
   ];
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
+  }
+
+  navigateToParkingLots(){
+    this.router.navigate(['parking-lots']);
   }
 
 }
