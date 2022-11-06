@@ -27,7 +27,6 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatGridListModule} from '@angular/material/grid-list';
 import { DriversComponent } from './parking/pages/drivers/drivers.component';
 import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
 import { ParkingGraphsComponent } from './parking/pages/parking-graphs/parking-graphs.component';
