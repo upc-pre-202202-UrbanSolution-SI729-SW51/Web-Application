@@ -20,7 +20,6 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTreeModule} from '@angular/material/tree';
 import {MatTabsModule} from '@angular/material/tabs';
-import {MatStepperModule} from '@angular/material/stepper';
 import { DriversComponent } from './parking/pages/drivers/drivers.component';
 import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
 import { ParkingGraphsComponent } from './parking/pages/parking-graphs/parking-graphs.component';
