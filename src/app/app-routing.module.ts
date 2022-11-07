@@ -8,8 +8,6 @@ import {ParkingPaymentComponent} from "./parking/pages/parking-payment/parking-p
 
 const routes: Routes = [
   { path: 'parking-lots', component: ParkingLotsComponent},
-  {path: 'signin', component: SignInComponent},
-  {path: 'signup', component: SignUpComponent},
   { path: 'parking-graphs', component: ParkingGraphsComponent},
   { path: 'profile', component: ProfilesComponent},
   { path: 'parking-payment', component: ParkingPaymentComponent},
