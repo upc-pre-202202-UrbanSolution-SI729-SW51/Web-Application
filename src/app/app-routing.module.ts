@@ -4,14 +4,15 @@ import {ParkingLotsComponent} from "./parking/pages/parking-lots/parking-lots.co
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
 import {ReservationHistoryComponent} from "./parking/pages/reservation-history/reservation-history.component";
 import {ReservationComponent} from "./parking/pages/reservation/reservation.component";
+import {ParkingLotsListComponent} from "./parking/pages/parking-lots-list/parking-lots-list.component";
 
 
 const routes: Routes = [
   { path: 'parking-lots', component: ParkingLotsComponent},
   { path: 'reservation-history', component: ReservationHistoryComponent},
-  {path: 'reservation', component: ReservationComponent},
+  { path: 'reservation', component: ReservationComponent},
+  { path: 'parking-lots-list', component: ParkingLotsListComponent},
   { path: '', redirectTo: 'parking-lots', pathMatch: 'full'},
-  {path:'reservation', component:ReservationComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

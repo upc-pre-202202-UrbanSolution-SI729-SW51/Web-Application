@@ -26,6 +26,7 @@ import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.s
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     ParkingLotsComponent,
     PageNotFoundComponent,
     ReservationComponent,
-    ReservationHistoryComponent
+    ReservationHistoryComponent,
+    ParkingLotsListComponent
   ],
     imports: [
         NgApexchartsModule,
