@@ -1,1 +1,13 @@
 <p>parking-lots-list works!</p>
+<mat-card *ngFor="let parking of parkingLots" class="article-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ parking.name }}</mat-card-title>
+      <mat-card-subtitle>{{ parking.location }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ parking.costHours }}</p> <br>
+    <p>{{ parking.hoursOfAttention }}</p>
+  </mat-card-content>
+</mat-card>
