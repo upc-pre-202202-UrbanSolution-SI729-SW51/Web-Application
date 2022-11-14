@@ -17,25 +17,24 @@ import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
-import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import{NgApexchartsModule} from "ng-apexcharts";
 import { ReservationComponent } from './parking/pages/reservation/reservation.component';
 import { ReservationHistoryComponent } from './parking/pages/reservation-history/reservation-history.component';
-import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.service";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
+import { ParkingReserveComponent } from './parking/pages/parking-reserve/parking-reserve.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParkingLotsComponent,
     PageNotFoundComponent,
     ReservationComponent,
     ReservationHistoryComponent,
-    ParkingLotsListComponent
+    ParkingLotsListComponent,
+    ParkingReserveComponent
   ],
     imports: [
         NgApexchartsModule,
@@ -60,7 +59,7 @@ import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/park
         MatSelectModule,
         MatSidenavModule
     ],
-  providers: [ParkingLotsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

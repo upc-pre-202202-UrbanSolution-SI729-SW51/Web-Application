@@ -1,15 +1,9 @@
-import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {ParkingLot} from "../../model/parking-lot";
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ParkingLotsService {
-
-  // Students Endpoint
-  basePath = ' http://localhost:3000/api/v1/parkings';
+export class BaseService<T> {
+// Resource Endpoint
+  basePath = ' http://localhost:3000';
 
   // Common options
   httpOptions = {
@@ -32,8 +26,9 @@ export class ParkingLotsService {
     return throwError(() => new Error('Something happened with request, please try again later'));
   }
 
-  create(item: any): Observable<ParkingLot> {
-    return this.http.post<ParkingLot>(
+  // Create Resource
+  create(item: any): Observable<T> {
+    return this.http.post<T>(
       this.basePath,
       JSON.stringify(item),
       this.httpOptions)
@@ -42,27 +37,31 @@ export class ParkingLotsService {
         catchError(this.handleError));
   }
 
-  getById(id: any): Observable<ParkingLot> {
-    return this.http.get<ParkingLot>(
-      `${this.basePath}/${id}`,
+  // Get Resource by id
+  getById(id: any): Observable<T> {
+    return this.http.get<T>(
+      `/${id}`,
       this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
   }
 
-  getAll(): Observable<ParkingLot> {
-    return this.http.get<ParkingLot>(this.basePath, this.httpOptions)
+  // Get All Resources
+  getAll(): Observable<T> {
+    return this.http.get<T>(this.basePath, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
+  // Delete Resource
   delete(id: any) {
     return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  update(id: any, item: any): Observable<ParkingLot> {
-    return this.http.put<ParkingLot>(`${this.basePath}/${id}`,
+  // Update Resource
+  update(id: any, item: any): Observable<T> {
+    return this.http.put<T>(`${this.basePath}/${id}`,
       JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }

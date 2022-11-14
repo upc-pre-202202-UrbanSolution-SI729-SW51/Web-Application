@@ -36,7 +36,7 @@
       "numberCreditCard": "123456789443456"
     }
   ],
-  "parkings": [
+  "parking-lots": [
     {
       "id": 1,
       "name": "Parking jockey",
@@ -50,7 +50,6 @@
       "location": "Av.via expresa",
       "hoursOfAttention": "9:00-24:00",
       "costHours": 3
-
     },
     {
       "id": 3,
@@ -66,7 +65,6 @@
       "location": "Av.Carretera Central km 13",
       "hoursOfAttention": "9:00-24:00",
       "costHours": 5
-
     },
     {
       "id": 5,
@@ -74,7 +72,6 @@
       "location": "Av.Javier Prado",
       "hoursOfAttention": "9:00-24:00",
       "costHours": 2
-
     }
   ],
   "parkingStatus": [

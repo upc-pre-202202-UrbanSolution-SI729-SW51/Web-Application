@@ -3,16 +3,6 @@
   <div class="mat-spacer"></div>
   <a mat-button *ngFor="let option of options"
      [routerLink]="option.path">{{ option.title }}</a>
-
 </mat-toolbar>
 
-
-
-
 <router-outlet></router-outlet>
-<mat-sidenav-container>
-  <div class="footer">
-    2021-UrbanSolution-FreePlace
-  </div>
-</mat-sidenav-container>
-

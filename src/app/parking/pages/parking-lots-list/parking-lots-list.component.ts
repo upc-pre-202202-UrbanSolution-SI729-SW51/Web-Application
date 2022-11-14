@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ParkingLotsListService} from "../../services/parking-lots-list/parking-lots-list.service";
 
 @Component({
   selector: 'app-parking-lots-list',
@@ -6,11 +7,14 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./parking-lots-list.component.css']
 })
 export class ParkingLotsListComponent implements OnInit {
-  @Input() parkingLots: Array<any> = [];
+  parkingLots: Array<any> = [];
 
-  constructor() { }
+  constructor(private parkingLotListService: ParkingLotsListService) { }
 
   ngOnInit(): void {
+    this.parkingLotListService.getAll().subscribe((response: any) => {
+      this.parkingLots=response;
+    })
   }
 
 }
