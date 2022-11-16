@@ -19,8 +19,6 @@ export class ParkingReserveComponent implements OnInit {
     this.parkingLotListService.getById(this.id).subscribe((response: any) => {
       this.parkingLot=response;
     })
-
-    console.log(this.parkingLot);
   }
 
 }

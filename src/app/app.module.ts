@@ -19,8 +19,6 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import{NgApexchartsModule} from "ng-apexcharts";
-import { ReservationComponent } from './parking/pages/reservation/reservation.component';
-import { ReservationHistoryComponent } from './parking/pages/reservation-history/reservation-history.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
@@ -31,8 +29,6 @@ import { ParkingReserveComponent } from './parking/pages/parking-reserve/parking
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    ReservationComponent,
-    ReservationHistoryComponent,
     ParkingLotsListComponent,
     ParkingReserveComponent
   ],
