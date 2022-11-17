@@ -2,75 +2,65 @@
   "drivers": [
     {
       "id": 1,
-      "name": "Frank",
-      "birthDate": "20/12/1980",
-      "creditCard": "MasterCard",
-      "numberCreditCard": "1234567891234536"
+      "name": "Mel",
+      "lastName": "Espinoza"
     },
     {
       "id": 2,
-      "name": "jaret",
-      "birthDate": "20/12/1982",
-      "creditCard": "Visa",
-      "numberCreditCard": "123452789123456"
+      "name": "Ricardo",
+      "lastName": "Moran"
     },
     {
       "id": 3,
       "name": "Luis",
-      "birthDate": "20/12/1988",
-      "creditCard": "Visa",
-      "numberCreditCard": "123456789123456"
+      "lastName": "Fernandez"
     },
     {
       "id": 4,
       "name": "Jose",
-      "birthDate": "20/12/1989",
-      "creditCard": "Visa",
-      "numberCreditCard": "123456788123456"
+      "lastName": "Lopez"
     },
     {
       "id": 5,
       "name": "Tom",
-      "birthDate": "20/12/1985",
-      "creditCard": "MasterCard",
-      "numberCreditCard": "123456789443456"
+      "lastName": "Ortiz"
     }
   ],
   "parking-lots": [
     {
       "id": 1,
-      "name": "Parking jockey",
-      "location": "Av.Javier Prado",
-      "hoursOfAttention": "9:00-24:00",
+      "name": "Jockey Plaza",
+      "location": "Av. Javier Prado",
+      "hoursOfAttention": "10:00-22:00",
       "costHours": 3
     },
     {
       "id": 2,
-      "name": "Parking Mega plaza",
-      "location": "Av.via expresa",
-      "hoursOfAttention": "9:00-24:00",
+      "name": "Mega Plaza",
+      "location": "Av. Via Expresa",
+      "hoursOfAttention": "10:00-22:00",
       "costHours": 3
     },
     {
       "id": 3,
-      "name": "Mall de sur",
-      "location": "Carretera central km 23",
-      "hoursOfAttention": "9:00-24:00",
+      "name": "Mall del Sur",
+      "location": "Carretera Central Km 23",
+      "hoursOfAttention": "10:00-22:00",
       "costHours": 3
 
     },
     {
       "id": 4,
-      "name": "Mall santa anita",
-      "location": "Av.Carretera Central km 13",
-      "hoursOfAttention": "9:00-24:00",
+      "name": "Mall Aventura",
+      "location": "Av. Nicolas Ayllon, Santa Anita 15008",
+      "hoursOfAttention": "10:00-22:00",
       "costHours": 5
     },
     {
       "id": 5,
-      "name": "Rambla",
-      "location": "Av.Javier Prado",
-      "hoursOfAttention": "9:00-24:00",
+      "name": "La Rambla",
+      "location": "Av. Javier Prado Este 2050, San Borja",
+      "hoursOfAttention": "10:00-22:00",
       "costHours": 2
     }
   ],

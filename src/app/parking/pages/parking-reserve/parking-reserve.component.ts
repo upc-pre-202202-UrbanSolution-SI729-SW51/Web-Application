@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ParkingLotsListService} from "../../services/parking-lots-list/parking-lots-list.service";
+import {ParkingLotsListService} from "../../services/parking-lots-list.service";
 
 @Component({
   selector: 'app-parking-reserve',

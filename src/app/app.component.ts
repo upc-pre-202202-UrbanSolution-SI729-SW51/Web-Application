@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Web-Application';
   options = [
-    { path: '/parking-lots', title: ''},
-    { path: '/reservation-history', title: 'Reservation History'},
+    { path: '/home', title: 'Home'},
+    { path: '/drivers', title: 'Drivers'},
+    { path: '/owners', title: 'Owners'},
     { path: '/parking-lots-list', title: 'Parking List'}
   ]
 }

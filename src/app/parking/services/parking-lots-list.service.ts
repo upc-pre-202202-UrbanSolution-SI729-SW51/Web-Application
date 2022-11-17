@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from "../../../shared/services/base.service";
-import {ParkingLot} from "../../model/parking-lot";
+import {BaseService} from "../../shared/services/base.service";
+import {ParkingLot} from "../model/parking-lot";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({

@@ -24,13 +24,19 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
 import { ParkingReserveComponent } from './parking/pages/parking-reserve/parking-reserve.component';
+import { HomeComponent } from './public/pages/home/home.component';
+import { DriversComponent } from './users/pages/drivers/drivers.component';
+import { OwnersComponent } from './users/pages/owners/owners.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     ParkingLotsListComponent,
-    ParkingReserveComponent
+    ParkingReserveComponent,
+    HomeComponent,
+    DriversComponent,
+    OwnersComponent
   ],
     imports: [
         NgApexchartsModule,

@@ -16,6 +16,6 @@ export class PageNotFoundComponent implements OnInit {
     this.invalidUrl = this.route.snapshot.url[0].path;
   }
   navigateToHome() {
-    this.router.navigate(['parking-lots']);
+    this.router.navigate(['home']);
   }
 }
