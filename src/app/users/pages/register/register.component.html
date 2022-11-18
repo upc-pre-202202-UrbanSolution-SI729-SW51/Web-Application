@@ -1,0 +1,22 @@
+<h1>Enter your details</h1>
+<mat-form-field appearance="outline">
+  <mat-label>Name</mat-label>
+  <input matInput required [(ngModel)]="driverData.name">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Last Name</mat-label>
+  <input matInput required [(ngModel)]="driverData.lastName">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Id Type</mat-label>
+  <mat-select [(ngModel)]="driverData.idType">
+    <mat-option value="dni">DNI</mat-option>
+    <mat-option value="passport">Passport</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Id Number</mat-label>
+  <input matInput required [(ngModel)]="driverData.idNumber">
+</mat-form-field>
+<button mat-button color="primary" (click)="addDriver()">Add</button>
+<button mat-button color="primary" (click)=" navigateToDriversHome()">Return Home</button>

@@ -27,6 +27,7 @@ import { ParkingReserveComponent } from './parking/pages/parking-reserve/parking
 import { HomeComponent } from './public/pages/home/home.component';
 import { DriversComponent } from './users/pages/drivers/drivers.component';
 import { OwnersComponent } from './users/pages/owners/owners.component';
+import { RegisterComponent } from './users/pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OwnersComponent } from './users/pages/owners/owners.component';
     ParkingReserveComponent,
     HomeComponent,
     DriversComponent,
-    OwnersComponent
+    OwnersComponent,
+    RegisterComponent
   ],
     imports: [
         NgApexchartsModule,

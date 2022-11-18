@@ -1,6 +1,8 @@
 <h1>Log In as Driver</h1>
+<button mat-button (click)="navigateToRegister()" class="button">Sign Up</button>
 <mat-card *ngFor="let driver of drivers" class="article-card" style="flex: 1 1 auto;">
   <mat-card-title>{{ driver.name }}</mat-card-title>
   <mat-card-subtitle>{{ driver.lastName }}</mat-card-subtitle>
   <button [routerLink]="['/drivers',driver.id]">Log In</button>
 </mat-card>
+<button mat-button (click)="navigateToHome()" class="button">Return Home</button>

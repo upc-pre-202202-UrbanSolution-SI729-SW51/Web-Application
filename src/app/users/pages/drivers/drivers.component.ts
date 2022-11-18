@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DriversService} from "../../services/drivers.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-drivers',
@@ -9,7 +10,9 @@ import {DriversService} from "../../services/drivers.service";
 export class DriversComponent implements OnInit {
   drivers: Array<any> = [];
 
-  constructor(private driversService: DriversService) { }
+  constructor(private driversService: DriversService,
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.driversService.getAll().subscribe((response: any) => {
@@ -17,4 +20,11 @@ export class DriversComponent implements OnInit {
     })
   }
 
+  navigateToRegister() {
+    this.router.navigate(['drivers/register']);
+  }
+
+  navigateToHome() {
+    this.router.navigate(['home']);
+  }
 }
