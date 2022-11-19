@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Driver} from "../../model/driver";
 import {DriversService} from "../../services/drivers.service";
 import {Router} from "@angular/router";
-import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
@@ -23,7 +22,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addDriver() {
-      this.driversService.create(this.driverData).subscribe((response: any) => {
+      this.driversService.create(this.driverData).subscribe(() => {
         this.drivers.push(this.driverData);
       });
       this.navigateToDriversHome();

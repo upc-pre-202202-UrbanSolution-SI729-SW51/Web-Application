@@ -1,0 +1,18 @@
+<h1>Create you booking</h1>
+<mat-form-field appearance="outline">
+  <mat-label>Brand</mat-label>
+  <input matInput required [(ngModel)]="carData.brand">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Model</mat-label>
+  <input matInput required [(ngModel)]="carData.model">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Color</mat-label>
+  <input matInput required [(ngModel)]="carData.color">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Plate Number</mat-label>
+  <input matInput required [(ngModel)]="carData.plateNumber">
+</mat-form-field>
+<button mat-button color="primary" (click)="createBooking()">Create booking</button>

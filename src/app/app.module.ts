@@ -23,22 +23,26 @@ import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
-import { ParkingReserveComponent } from './parking/pages/parking-reserve/parking-reserve.component';
+import { ParkingInformationComponent } from './parking/pages/parking-information/parking-information.component';
 import { HomeComponent } from './public/pages/home/home.component';
 import { DriversComponent } from './users/pages/drivers/drivers.component';
 import { OwnersComponent } from './users/pages/owners/owners.component';
 import { RegisterComponent } from './users/pages/register/register.component';
+import { DriverDetailComponent } from './users/pages/driver-detail/driver-detail.component';
+import { ParkingBookComponent } from './parking/pages/parking-book/parking-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     ParkingLotsListComponent,
-    ParkingReserveComponent,
+    ParkingInformationComponent,
     HomeComponent,
     DriversComponent,
     OwnersComponent,
-    RegisterComponent
+    RegisterComponent,
+    DriverDetailComponent,
+    ParkingBookComponent
   ],
     imports: [
         NgApexchartsModule,

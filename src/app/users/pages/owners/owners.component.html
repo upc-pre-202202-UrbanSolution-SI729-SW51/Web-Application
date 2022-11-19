@@ -1,1 +1,8 @@
-<p>owners works!</p>
+<h1>Log In as Owner</h1>
+<button mat-button [routerLink]="['register']" class="button">Sign Up</button>
+<mat-card *ngFor="let owner of owners" class="article-card" style="flex: 1 1 auto;">
+  <mat-card-title>{{ owner.name }}</mat-card-title>
+  <mat-card-subtitle>{{ owner.lastName }}</mat-card-subtitle>
+  <button [routerLink]="[owner.id]">Log In</button>
+</mat-card>
+<button mat-button [routerLink]="['/home']" class="button">Return Home</button>

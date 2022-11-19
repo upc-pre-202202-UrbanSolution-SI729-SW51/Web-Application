@@ -19,4 +19,4 @@
   <input matInput required [(ngModel)]="driverData.idNumber">
 </mat-form-field>
 <button mat-button color="primary" (click)="addDriver()">Add</button>
-<button mat-button color="primary" (click)=" navigateToDriversHome()">Return Home</button>
+<button mat-button color="primary" [routerLink]="['/home']">Return Home</button>
