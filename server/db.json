@@ -5,7 +5,16 @@
       "lastName": "Espinoza",
       "idType": "dni",
       "idNumber": "73286417",
-      "id": 1
+      "id": 1,
+      "cars": [
+        {
+          "id": 1,
+          "brand": "Toyota",
+          "model": "Corolla",
+          "color": "Black",
+          "plateNumber": "BK3-623"
+        }
+      ]
     },
     {
       "name": "Ricardo",
@@ -41,6 +50,22 @@
       "idType": "dni",
       "idNumber": "85627496",
       "id": 6
+    },
+    {
+      "name": "Pedro",
+      "lastName": "Vertiz",
+      "idType": "dni",
+      "idNumber": "75689425",
+      "cars": [
+        {
+          "brand": "Nissan",
+          "model": "Mazda",
+          "color": "Blanco",
+          "plateNumber": "KF9-549",
+          "id": 1
+        }
+      ],
+      "id": 7
     }
   ],
   "parking-lots": [
@@ -49,35 +74,40 @@
       "name": "Jockey Plaza",
       "location": "Av. Javier Prado",
       "hoursOfAttention": "10:00-22:00",
-      "costHours": 3
+      "costHours": 3,
+      "accept4x4Truck": true
     },
     {
       "id": 2,
       "name": "Mega Plaza",
       "location": "Av. Via Expresa",
       "hoursOfAttention": "10:00-22:00",
-      "costHours": 3
+      "costHours": 3,
+      "accept4x4Truck": false
     },
     {
       "id": 3,
       "name": "Mall del Sur",
       "location": "Carretera Central Km 23",
       "hoursOfAttention": "10:00-22:00",
-      "costHours": 3
+      "costHours": 3,
+      "accept4x4Truck": true
     },
     {
       "id": 4,
       "name": "Mall Aventura",
       "location": "Av. Nicolas Ayllon, Santa Anita 15008",
       "hoursOfAttention": "10:00-22:00",
-      "costHours": 5
+      "costHours": 5,
+      "accept4x4Truck": false
     },
     {
       "id": 5,
       "name": "La Rambla",
       "location": "Av. Javier Prado Este 2050, San Borja",
       "hoursOfAttention": "10:00-22:00",
-      "costHours": 2
+      "costHours": 2,
+      "accept4x4Truck": true
     }
   ],
   "owners": [
@@ -93,14 +123,15 @@
           "location": "Av. Javier Prado",
           "hoursOfAttention": "10:00-22:00",
           "costHours": 3,
-          "imageReference": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFhYZGBgYGhgcGRgYGhoaGBwaGhgaHBgYGBkcIS4lHB4rIRgaJjgmKy8xNTU1GiQ7QDs0Py40NTQBDAwMEA8QHhISHjQhISs0NDQ0MTQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MTQ0NDE0NDE0NP/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYHAQj/xABBEAACAQIEAwYEAwQJAwUAAAABAhEAAwQSITEFQVEGImFxgZETMqGxQsHRUmKC8AcUI3KSstLh8SQzQxUWc5Oj/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAJxEAAgICAgIBBAIDAAAAAAAAAAECESExAxJBUWEEEyKBMvAFQnH/2gAMAwEAAhEDEQA/AAt0d4yjEc9jv1BG1D8Twsp/aYdijDdJI06rO3lqOhFaHEF91dWkH8Khx4GAJ+/nQi6bjDbY68tehG4NYpml0TcN4rbcfCuhkubEM0Kx/dJHdP7p9CaoY7BKuodG8CO99RUyYW06Ot6cwPcZYDAHflqPA6VQdntDvDPbmA8EEDpvp6yPEbUw2CyuVtRoSY0q1ZuLBAInlyqleYBuZBkgE+P38+UU1NeVUTo3nAQjiRcZWA1Xn7TVHjtoK4ZJDjXvZYI6GGMfz0oZw7C3lhwpA5E7EVqX7P37tn46qMvOWA1PQGlWR2QcOS/dtZ0RygkMVXNlI3DRtG/tQritsgB1+ZN/Kfy+xbrT8PiL2GYsrFZ0cK245HQ7j+eVSPi8+pMzz3mmBZwlsXba6ZluMBA/C/TwPT1FBb+FNu5kYeU7kfr4Vo+zOBzN8FGAS60AknuXBrAPKVBI8Ujdqm7V4VjiGW4VznIGddQHCKC423IkjTcjlU6DZk71nXao2wnhU2JuXEJDKhIkE97f3FVv6850y2/XN/qp0xxaWyzYww6VdwfCndoRCesDT1O1Q2rN7LmJSDrpLEDrvtRHh3ai9hwVtlIO/cn7k1nLjk9HsfS/5Di4IPFy8Xot4rg621ElS0d5RqR5mhXw4O1VsRxa6xJka+B/WvcI964YBQbCWEAE7UlxSjsy+s+uhz1Vt+6oJ2cKznQaDc0bscFz9wRmyljJgBRu7E7KOtK1gryYe5lcuRcRSciBYKtLDTMAYHt7X+B49Q3wrrRZ3YvrsrZA3XUzB02HOnR5rMubC2yzrBgnK5GhE/MAdfIUNxuJZlIAmTufmYn7DxrQ43CZ1a80C0CwTMdTBAEIveZiSoAHNgJnSqvC+FFw7FrauFORbh2HNZkLn8fMCqQmCWwOSEDB57zspPe08tFGw8qjw96JKlQCCNNj4AjWOpG+3WfVuMcylhkaQQoAzwdp3y+W+1MuozGANegH0qhFS6uupnoBI9p28gKrNYLHaPAn9aKYezD95WLAaDKZJ9qp4nPnIKFSOu457eUU0xUS3LCoAuWdJaP1NUrriYRYA5wB9fSrDZyuY5iBGsd0H1mmXsSYAywBtIUn3igYb4BiXwwN8KM+yFtYkEGBUQx7XGLOGeWkkETtsARAofhuNIqMlxc8g5Y0IaNNeQnXb2mhBx7knII8enmToPWnQk1eTQ3+K2k0IcEH5TA5dAfrQzEcfuSRbYoPD5jQoQzS7kk7kfmT+QqNUoSG3ZM+LYmS7EneXNe1H8OlTDqzrmO4A6a5WjcFTIjl/wA7VUw3DDcMBlzDkxhx5Ty9xQF0IEKxUAaZXJUSNiv4TOn586ps7iTqY/EpmJjcbrXOlL2Xg2D9lXJ+xEaee3uPYVT4l2dutbVAoJQsQcwAObr4+NZheI3BMXXH8bR6idPSKlTit5drrnwLufrmn3p/l8BURXex2IIHcXSdM6j200+1C14XdVzbIyv+y8KfCCdD4EEg8jRscXvH/wAj/wCJ/wDVrVfG4l7gAdi0GROYxOmh5U05eRuKZI2BxpAVpygQAGSI96tYHh2IJytcKDc5mJXTwBIoWuNvIAquygbfs/Uaf8aCvF4xeBhnM+Q/IU7kT1QdxYcjKAkdQok+sTQw4VlgxoZ06H32M/Q1E3EnP4z7D/TUSY5zu0kTyHI+VTch9Q1wbFG05kHK0T1VlOZHUnTMrQR5Ve4xxD49xmIEvlbSQM0d4CeWYGst/XX6/wCX9Kfh8eQwLajntp4jT6U7bFRb7RWyrJcnu3UzeTqSjjzkBv4xQrBqxbTrWp4hgjdwxKkEoc6kHRlIh49AsjqgrM8NtM7wMx61pEhhzNpDkt51HcIOw2qK8jKTmbbrUAxa7TPkDWySRLZK8GifDb620fU6rICgfMCMuY7x5daEXH0ka+I/SrnCcKbrogmWIkEgE+QOu01M1aHFmtxuLe1hSx0+OUEczkWWPqWQf4qy97EkgIDAElj1JrX/ANIFtLCWnuMFRFyIkjMSN4WZLEnU7ARJ105W3HXklUQDlmBJjxIYVh1Zdmgx3GgbaW0LQk/gf5mLFmJjU94qOig82MU0xwyhZIkwxggx4c/X+QKXtBe6JH91p981WrPH7pE5EgeDf6qdNCwyTEYlJ0bbaAQNPSm2+KKgPdUsebPt5LlqVeP3In4Yj+IfUmpBx9gMxtjlElutFv0PqVk4sq97MmbpmOnnI196t3O0hYKoNtVUaQ0sSTLEknQnU/yKsJx8x8ix4kzVfE8SZ9AQg6x9qV/BXWipj+JB4DOzR0PcB6wNzrvQfG3iSIM/81duWgWVQxZmMDSdz7nyFVsZhCrBdflkzEgy2hg6aAGN9atENMoOuvU9P1rxEJq4uFA7zEAdSYB8ju3pJ8KkwzrnAVmKiNESXbqFk/XTyqrFXsWD4a7nKqkmNAASdxqQASBE67eNFrVrC2Nbji64/Bah/wDE0/DXx1f+7THwd/EXvgsjWbZghFRsiruGuZQAzcyzc/2QAAawmFwOGcg2mxRX8ZuC3bJ55UCnMPEnXpFK0Ur8FH/3i40t4W2E/CDcxBIHiUdV9lHlSrqicEJAKtcRSBCKuFgCNh/YUqnuiusjlDNzVgfPQ+k/rUuHu20DNetO+oC5bhtkMRM5srToDQ64zndGPjlb7xrUYdwIyv5QY9iNKhIp9XoL3MVhW2wznzxIBHkfgkn160NxV+2MuS26ATOe4LknllZUWOe4NRTO6keIBH0NeI8yAZG0H7eNUS4smtXlO+3OI99dD9D41Ze0pEqRHOSIA8SdU/i7v71UFtoJDKwPJg0adCIM+dTqwXVFeRsRcG/I5cmvoRtyoJyhzW+RHpp6HXfzpkfhYB1How8QY8PpVzA41HOR1gzMgHfnKCCNeanWdZq4li07dx0IESZEjec0xzHQHwqXgtZM/cUqTllkEd4jaeRjY/pXqHfxnrzE/nWlfhilpRlBIIjMIO2hHT9KG4zg7I2YDuyARO2g0np09J8TsmOsAoOf5mnZz/M/rU9zCaaaaiQdTuJpPhCKdommEuBceNk5H1ttIO8qT+IdR1HqNRrWxTXcOSEIAcBg4GrKdVZSRsR0qi2H8KjNn+daaYmiSzbe48sS3mSasJaKNDAj0rzhzlLlvVgC4B1PPTr415xFmyoCSTkQmZ10HWq7E9S58KGIzAAasTpA55idBV4cfGEQNYZLl59TkYEIokKrMNiTqVGui7TWM+CC3IRzj7VMAFiO91khYPudPGm2KhvEMZiMS5u3mLseZI0HJVH4V8BVV1YbrA8h96LYe+p0IC+bA/ajmK4dZFi263ld3nMigEpBIAaGmdOnOpcqGlZjba8z+VFMMo3IU9Fi2depJtt9auDhDN3oMDY7b+FEMFwZyiuxbvIG0MTKzqZ2qXJFKLBItawcpbwCBV9AsGlesgKdiZGvTUbaURxb21bIHLsBGjDICSAJY6aEj/ag7XHLS7dwNzPdMHkdZGlCyUqvI98Wq7QTr6eWlVizvJ5Dc9J2FPwyIflLE8yULAeIkgeppXsMh0Nxv8On+bWrSIsja+i5QDJXYjeZmffrSR7jfIMv7x39CdB9/GrFvBIBKSx6suUR71N3F+ZxPQan+fSgLZDY4cpOZ2LnnqfqTqaP4G0VHcARecd0erHU+9BxxFV+RPVjUN/Gu/zNp0GgoabBUg9ieIW1BC99iIJGij13NUsLLtEHXwMUMsHbWtB2fXNdReroPdgKVJIqz6Ct2wABFKnzSqqRlk+dQCC0JcAnukMhAEAfKzxuDy50jecfgc+YQH3V/wAqms8NysBA1IHyj86JXeGgclP8Kf6ay7JGwITEsd7TjyykemtQMQ47yOYmO6ZidBI1q3iOFJmzQAfAAD2iKrXMKubVOQ1VRGhPRfKn2QrZWewY0V46NbJH02qEKygkq4jmFIB8IPtM61ffC2zG0zyyzttFR3MAnRvRo+lFodlrDPaPzlD4kZWGn7wH0moUdXDSoaATtBganVR06htqOcNwamyq5QR3hDAHmaKcG4QpuQn9mxW5DLqP+28907HpBEGlYqMVi+EhD3SHBCkEbkFQw+hHj4ChroAdBBHvXZuN20tSl+2l0QpVE0AOWNVYSq6aZSY6CsjjEwygsjqve1R7cspPysJBLwNyBPd1nSgRi/gh9wA3Xk3n0PjXj24rpPAXsqqpeFu6IJzIltrnzbMt5A+k8qg43jeHZ1RUKZSufPhxqA+aJ0ZTEiQNokGKLGc8KGRXjIR1rY46/gsjlbYDGMkIcscySH0YaaEc6HYSymJuZERUbdUUtDAGSFzkktB2nUDSqJA/D1HxFnXvDfUSDpPrFT8cIGVQxbuIQ7qqOBkQBYUwYjc/tGtavYx0Q3GQAKAYLqkz8pDGdPeaqP2ZuuofIWgRKEXBAMRCzEbeNTeS1fR+jCG2dN/fxNIoY3NaZreHQhWytE5ocADXaRPjyPhRPDvwzPkfLlP48t45ZHygCM2UyMx36VbdGZgfh1PbZhEMR5EitdjbmDYhbNokyQuRTmaToWDk5QI3E7neg+I4W6zmy5xmBRYOQxpnYQqbgwTP7pouworLiXytDuYWSM7bSB16kVGC5EPdyIBAVmYkjbu21kn1hfEUb4J2XvXySBbCqRnX4jJcyzDEE2zpH7MV0rgPZ7AXbeS3ZRSsh1ZQ7lhIDC4wzESZ39KVJBZxa22ZstsROmZ4LctkEquvUtRd+DokF2DPzLsB7A7Vpu0nBbdu+6IigKQBCgfhHSheH4dbJhu70gNv/ApNF2MDPaQaF5HIID9zpVd0A+VPVjJ9hXRsF2EW4nxPioiGYHfzDUgZiw6+FNxv9HN7KWS8ogaJkdiSB1KiJ8qpCZzK5nOhnypnwT0oq+EdT3nTTkCpI/hWaI2eA3LrFMPcFxhlkBSDJUlozKCRofw8h6tAZfIakVK2FnsDxBv/ABgeLMq/eKs4nsRcsWw+IdVYkhUS38RjABkuWAGp8aHjLBZMVbStT2TsziLP/wAlv/OtVrXCwxyhGzamdAoA3DRtpOs8vHTXdmeHWxetsriQ69wHWQZ9vWs5yXVlpHUwKVPilSXEZHzzb7VKCCbY9Lg/NRRbC9orN0GSEIjR2WDO0MDFc6uW2WQQQRofA9DTLV0g6af8zHvVuCZakzpt8JOr21/vXLaz7ttUBtqZh7ZgE6XLZ0G50ashgMVK5CwVCe8VRSy6AZsuhbYTBk9ZpzWEc5XhYUw9tFYMRsSpK79d/A1Kgh2akojaZkaeQYNPkBSOHT5cw/uhj/lFc9NgTpMj3BG/lXj4xzEu5jaXY+0mq+2iVNnS86pbzQCAToSV8TEjU0c7JXg+I0EFS43J/A4n6Gue9mOPKjgXs7oRlY52JWdnClssjpsR4ma33CsWtrFImYENLIwjK6sjZGHn95HKvP5eFwmnV29+jojNSi18B/tlw5HuhmUE5R+dZZuCoY0iPHfTY/zyrVcb4ktxgV5Ksz1OpH1oX8Suxu2ZK0ibgXDFEkIWKDuiMw0EiQd/SDVviHZtWuKqoYIBLSgK93vZMyFtSObCrXZ/iKIWVvxRqOW41ole4kiuLjNlVVlieWnhXPzcqhWctpfopJu8eDlXEeFvkZkuuQrAOHCRBmDMAH5TOoPSgmN4ewOZMTbYETlUAspG4AifL01Nb5eIWUw91WgNeYMoy7gFm5bQIrEtxd1OS3hmuIqM0ksi93W5llYMSJ866/NJEvGyvheI4kEKL2cnQB7LPPICI1NbbD8CTK4filiyz5gyWvhAKp3U5m+b8JMDSRzqSycOqIwsO5aMqKkvtm1WO6RUVzG2clxzh7lt0JlGGV20lSuXrJE+dJTzdCpasqP2GwwjLxS2wM5jlw/dGUmfm11AHrQy12XQ3xaOJliUyD4LlSXAIl0EMsmJBgxvUNjtHbd8qW3QxJcMfw8mgAiNd/zrccW4ioxeHdUdkAtqzKpYAhueWYge8GlKbWkCj8mMxXZ82rpsM6nVjlRikBWZdpJaShGsnUa8q03anB4fDPYHwu4LIJCjVmAYKPMkCTUPGeMfCvPfVBc75yq0wczROnQa+lEO0WMtYlrdxRmBtjfSJkxHrWcedKLlJOrqlsfS3SZzxxfIfJbupnZHzIGgKbcZJ0lS0tPUbV0H+jOzdVmN0XB3DlNwEaSPlk6isNxHiWEOIdcQcQAgRE+EiMogd8HM4MSdIHWt92I4thES4ti4zgqWhwBcBAiMm4B9tK1bTSdUtkfAM7SmcRc/vn6UOwdhHJD3HQaRkQPPUMGYae9TcdxOa/dI2zv/AJjRDsc1hje+MgfKqZQdTqbmaPYV5vD2fKn/ANN5V0DnDeKW8PaC/wBaDKoIAawRrvEjc+tB8R2sxzoWt28ytmAIRSNNDu33FA+IcfW1fvAYUKgbu3M7oBETk0gtqRp1rCca4ubxiAF5IJIA8Z1Ow/2r00mYukGsZhHzZ3xNpGYmRnEqRyYKZU1pP6O+J4bCu74jErLZchCuwOjhtQD1FcsVDXhHQVaVEt2fStrt7w1tBi7XqSv3ArM9te0WGvlbaYm26ZQSFyt3pPOZ2jSuO2RkXMQsjTUA6nnrOopyYq45C52ImYkx5wNNgKJZQR3g26YzDW+4qW3Lah2YKB1UKRBPj1IrQdkcUj4m2oCAyYAgnRCdYAHKuUFyJ1MAmNTW2/oxuf8AXWx0Fw//AJt+tYciUYOXpGnZ6O70qi+MvUe4pVX3+P2ZUz5v4Tw7E4rKLYtAFVtgHoDpOhMydyZjwqpxbs1csXTauOmYRJBOXbqQPtyNDMFjbiElHZDpqpI+1aBuNwbJdUc5EZmYOlyfjGVnMEYwCwYDZt52qSl4Z2cU/p6/NN/3YAGGZSx/Y5rDc9J1EAiTOtaLgHDfjwtxWVBqrshW2Gcd1mubMuYASY0Mg7A0eI9oEvXGYWPhZrYRzbuP3mDBviQTpMAEEnTx1q3ZuI2FufFLG6Qfh6ycjKrqSZzGGZuo7pnarV1kwk4uX46+SHtLgraIty1mnuhzspJJ5TO4/nSsukSJ2kT5TrWoxHEbV3DtbAYOCcx3BI1DLOwMDTw98uwECN+f5RQjNhW01oEQjlt5GQptIBVkg+M6R5VpMLcVWwuR1IBSSghgWeCG0AKnukEftHpJxNpumh69NQZ+laHhmKYugzEk3EksSdM6wNdtByFKWmC2brA4wPcupJJRhM8pB0Hhp9aIZqyGI4i9q/cCIhkiSWYE90ETp4xUycdvna0n+Nv9NZ9WaWajDvFx9vkTz+a59P8Aeg3aXjjgtZVpBVFyRHeb+syJA6Jb67edWeFtiLrfKiEhRILOY1iAYAOp1rZ9n+zQt3C95Q7ZR3nCsd2jYQIzHlzNR9qMmuyumPtSwYT/ANFxN2ytxUCraEMWaZkAaCAeXI86w2I4S+dpPU7RM8t6+iMYgTD4gBYALwOWwrimNfvHSulqjPYW4DwK/ilt2EvKgRIOa3nEAAbSJPnVftJ2ev4YNYe+riFIyWwg+Ytqskc+lab+jXED45BIHcaNfEaVN/SBbLYgj9xftWaTeEHk5dhuFtmTM+VQTrkmJOswJP1jlWwbi4w2IVvi3MQmQQbKPbhtZEGDMRrroTQ9cDLAEVvuzXDlTFBQhUBFlW11yAk89CdaqVxeQObcW4ihcAgMFIJ3jeSPoK0eCxQuKrgBQyoQFGUAFFIgbD0q/wBt+zfxsTlUbwQFAjXrEUPx/AMThlRfilFVVAUIhAAEblST7mpdNUCuzCcY+H8W7+1ned11zHkatdjrgGLQryDxrP4CPzqrj8KC7sxlixJO0mdTA0FEeymFAxCsOStznlFW/wCJK2Xnvl2jMCWdtToNXO/QCiWDAw+dvjWnLBZyXEbLkLSJ117w00OlZ6VZirnQh5IMQQGYEeoj1q7h71hcOWtJ8RUJ1aVfM2XMzacwBpt7VlRdlri/EmvWjnR0QAKrBzkuKbk5srD8JVgB5nzB4fDW2dVCSqwzd4qWXMAeRynvDqNKJ8Vx7JbCC4WMZYkgBYAIUKSsSDrm2bahOBsh3ku3dC6EgcpYAkkQDoOo102rWhXRL2o4AmHh7Rc2nAKl2VmBjvISoAkeQ0g+NVezGFTM964hdLVsuEglXYtkQPGyZiST+6AN5DOOcXdwUBITTMJ0JXYkeEmvOzqZnCFynL5iFBLfigEEQz9N9+RYrtlXHO7mchUSSFCkLJOsVa4fhggDXVdVcAzEdzeQTprFEOIsCzlLislsKoyuGzM2dmZSZLroBmHUUy9x+5IRssJkUDLqoSIiSY2qJW1SOj6fqp22v2BbriAByrS/0d4gpjEYckf6wPzrOPdBJgzrzo32XJ+MhXlJY/uwfzy0Sj2g0zJ4n7OqYjiRzHXnSoE12va5PscXpGndnHnYLIGoOx5xyqVsY7KquSypOXNqVn8KtuF/dmOcamocq9T7D9a9zJ0Y+GYR7BfzrvOc8aNwDpvrI+2lFbBzqVLZVXIpX8R7hAj0QT5ihBI/21qVbp60hlzFqqIAsAsWkLJMaZSzddToNKHFeVW2aRuajVSebe9AmRIvnRXh9i6XTKW0ZTttBHhSwGHOYQWnw39+VdC7L8BLkaEzB1NS2NIC4fANmYvJ21MknTmTV5WC7D1Nbbi/Z7ImaKx74WWImD5VDRaNH2M1vLJ6V0mK572Lshbokz0roVOHkmZnuLYmLWKEjTbbmADXEcbc1Nda7QXWC4gd0ZjzBn3iuUYi1JrSQkLheOZHUgxW4xjm64YvmkDU+FYKysOPOtwcOyBC0d4aRPhvp41rwJXYSf4lR7IDDzra8HxguY0kbfDA9lFYm+dR50f7Jx/WQQGGm0npz8KjnrsmKOg/8JXxx0kLB25hai7d2v7NW8wansH/AK1okTM+1S9slBsQY301jlWH+rL8o4ZixLnSdTWm4VgiMM7hmRs6AZFXX5iZJBOkeFQpwuXmZ9P966Fwfs9NiNpII06A/rS7egqtnDMThr2ZpcnU6ZRJ18q8wpS3buF2urcZgFyMU2E947RJO458q23aPg2RmBHXlWPxWB5yd6tSsloGBQiHMwdiAFCkEA90tm1zLAaAQIJBGoFVfisOZHhNT3rUHb8vzqJ8Ow/CY6jUe40qxERYk6n+edaw8JUAPaM7Q6GZ6GEMDlvWSC+Bp9t2QypKnqJB+lDBBa+lyQp8QuaIO5gEaTvpVV7DDViATr3jlP1io34hcYFXJcHfNv4GetKzxK6gypcdR0V2UewMUqY015Ir1tkMMCDvr060f7G3CL0bypnwAE6esVnbt1nYsxLMdyTJNabsURned8ojyk5vutE/4hHZsc9Ko6Vc5qcpYEmdPTSvUBB/UA/erOraBR6D9dqlTAsfmBHkFP3YV02ZUVviHw/wr+lSW3M7KfQURtYGPw+uUT9LoqRnCEiTI5Q0epF00uwUQLmYfhjoCij2mkFjffoIj3BNTm6zLuQNoDNB85JqBFpDDHCdWGldd7GWiSDpoK5VwVdRXXOxv5UvIeA7xtSbTQJrkvFCVckaGuxY/wD7beVcg46O+fOnLYR0Euxzn4qkk710XiGJyZY8a5j2Yv5XHnWs4tjM3PlUJ1KiqtWAOOYskvtrPKsNeeCa0HFr4k7VmL7yTWjJI0fvVp24u7qoIHd2iZ2jrWRV+9RWxerTjlQmELmMM0b7O8QZbobWRWTfEQaK8IxwBnSo5cgjoHBMZmxJY/in61P27P8AZqJ60C4Fjl+KGMb1b7Z49HAAPKsk8UXWbMjwtTniTE7ct67DwsRaXyrlfALYLiutYZYVR4CiOyZaOd9urHfY1z2/hia6l24IJ9K565AmpTyMynEcPDGqQQ6xOu/j50Z4kZNUba1qmTQOa0Kb8Lxq66a0xrUVViKnwj1Hv+tNayRvVhkqMpQBCFitb2Mtau53jKB4aEn7VlvhHlWm7McQSyjq8jM0gxI+UDWNeVKeY4HHZq6VVVxto6i4n+Jf1pVz5NTKJhh0P/0A/c16wRZ1EjkbCDXoZbSpTccnR3A5S5J9SIpj4eBWpFFS45bTKv8ACiKfdRNMValZK8UVQiYCFimKK9Y0lFIA1whgCK6x2NuVyLhrwRXSeymJCkGPakNG54o8W28q4/x5+8a6ZxjFhkMD7Vy7jTjMdKLtiqkM4VfymjGKxsjesth7sGrN7FGKVZHeCtxHETOtB2ep8XdJqiWqxD82tHk4SwTPmHy5og9JrNk1u8EJtKNYKL9VqZScdDSTMiza1cwTa70KLEaHcVYsXDVPJKNdwu7B3qXi12edAsHfI51Nfuk86mirDvZx4ca8xXXMM0qp8BXHeBN3hXT8Bi4tjwFR2p2FWjM9thLHWucYl4nWtt2pu5mJmsBjm3oiDKGJaTUCDWnOajBrVCGONa8pzUooAhdaZkqzkr3LQKitbdlMqSPKiNpg695R5rofUbVUyVdwyd2hghn9VT9pvc/pSqX4dKkVgmsprVjEppTlSleGlQ3k2SVAq6KhqxeFQGrRjIRNeqaYa9SmIJYJta2vBMREaxWHwja1puGXoFJgjWY/HHJEzWH4rcJNHcRiNKzePcTSQ2yiHNK5fMb1GzVG7CmIhvPNQFqkaojTA8LV0Th//aT+4n+UVzqi1jtBdRFQBIUACQ0wBAnvVE4trA4uitxRMl64vR29iZH3qK29MxOILuXaJaJiY0EcyeleIataJ8hK1e0qYXNaH23qdHpMZpOEXIIrZ2MeQm9c+wF+KPpxEBazkhpkfG8TM1kMZco1xLFgzFZ3EXJqooTK7tTKTGm1YDlqRVFRCpUagB6pUiJUtu3NW7OFPSgCp/V9f9qt2sNAolh8GelX14cY2qWx0Zv4Ne0abA/zFKix0Q3cMRyqletmthjrAHKs9i0qEXdGevoaqstFMStUXWtEZsrRXor16ZNMRZsvRPDX6DI1WEu0AHLmK0oZiHJqM3j1qC5cNAHjt41EzU1mphagBzNTDTS1NzUCHUppk0poGPDVIrVXmnBqBFpHqZHqkpqVWoAMYa5Vz49A0eKk+Kamhl7EvNDLprx7h61Az1SQHjV5NNJpLQIkFT21qJFq1aSgZcwi0ewVoNQfCJWk4fb8KllILYDBDpRy3gFjUfSoOF2ydwK0lvDabVnZokjM3OGpJ0pUduYbU92lTHSMjxBazOOXetZxNN6zGNFKLJYCxIobdoliRQ67WiM2Vmrw161MY1Qhwp61GDSDUATZqjc15mphagBMajNJjXlAjw14TSNeGgD2aU02a9oAVeg15Xs1QD1NSKahBqRTUgWFNPJqBWp80DPHqM05mphNAHk0lryvRQIs2EnnV6xb8aGo1EMOaGMMYRByrRcPt7UAwCnStTw1NqzZpFGm4RYrT2U0oLwe1WgUUoxti5H4K5tUqly17VUT2ZgeJ86yeP5/z1pUqiJpIA4rehl6lSrRGbK7VGa8pVQhUqVKgDw15SpUCGNTaVKgDyvDSpUAeV6KVKgBV7SpUAeinrSpVQEi1JSpVIDGphpUqAG0+lSoAfbohhqVKgYewH6VqeF8vP8ASlSrORpE3HCeXp+dGhSpU+Mjk2NpUqVUQf/Z"
+          "accept4x4Truck": true
         },
         {
           "id": 2,
           "name": "Mega Plaza",
           "location": "Av. Via Expresa",
           "hoursOfAttention": "10:00-22:00",
-          "costHours": 3
+          "costHours": 3,
+          "accept4x4Truck": false
         }
       ],
       "id": 1
@@ -116,7 +147,8 @@
           "name": "Mall del Sur",
           "location": "Carretera Central Km 23",
           "hoursOfAttention": "10:00-22:00",
-          "costHours": 3
+          "costHours": 3,
+          "accept4x4Truck": true
         }
       ],
       "id": 2
@@ -132,29 +164,19 @@
           "name": "Mall Aventura",
           "location": "Av. Nicolas Ayllon, Santa Anita 15008",
           "hoursOfAttention": "10:00-22:00",
-          "costHours": 5
+          "costHours": 5,
+          "accept4x4Truck": false
         },
         {
           "id": 5,
           "name": "La Rambla",
           "location": "Av. Javier Prado Este 2050, San Borja",
           "hoursOfAttention": "10:00-22:00",
-          "costHours": 2
+          "costHours": 2,
+          "accept4x4Truck": true
         }
       ],
       "id": 3
-    }
-  ],
-  "ParkingHistory": [
-    {
-      "id": 1,
-      "Reservation_id": 1,
-      "Name": "Eclair",
-      "NameOfParking": "262",
-      "Location": "16",
-      "HoursOfState": 23,
-      "CostHours": 6,
-      "Total": 6
     }
   ]
 }

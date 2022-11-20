@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'drivers/:idDriver/:car/:idParking', component: ParkingInformationComponent},
   { path: 'drivers/:idDriver/:car/:idParking/book', component: ParkingBookComponent},
   { path: 'owners', component: OwnersComponent},
+  { path: 'owners/register', component: RegisterComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ];

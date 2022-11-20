@@ -4,5 +4,5 @@ export interface ParkingLot {
   location: string;
   hoursOfAttention: string;
   costHours: number;
-  imageReference: string;
+  accept4x4Truck: boolean;
 }

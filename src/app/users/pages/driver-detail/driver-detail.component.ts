@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {DriversService} from "../../services/drivers.service";
 import {ParkingLotsListService} from "../../../parking/services/parking-lots-list.service";
+import {Driver} from "../../model/driver";
 
 @Component({
   selector: 'app-driver-detail',
@@ -10,11 +11,13 @@ import {ParkingLotsListService} from "../../../parking/services/parking-lots-lis
 })
 export class DriverDetailComponent implements OnInit {
   id!:number;
-  driver:any;
+  driver:Driver;
   parkingLotsCount=0;
 
   constructor(private route:ActivatedRoute, private driversService: DriversService,
-              private parkingLotsService: ParkingLotsListService) { }
+              private parkingLotsService: ParkingLotsListService) {
+    this.driver = {} as Driver;
+  }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['idDriver'];

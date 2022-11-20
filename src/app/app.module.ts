@@ -30,6 +30,10 @@ import { OwnersComponent } from './users/pages/owners/owners.component';
 import { RegisterComponent } from './users/pages/register/register.component';
 import { DriverDetailComponent } from './users/pages/driver-detail/driver-detail.component';
 import { ParkingBookComponent } from './parking/pages/parking-book/parking-book.component';
+import {ParkingLotsListService} from "./parking/services/parking-lots-list.service";
+import {DriversService} from "./users/services/drivers.service";
+import {OwnersService} from "./users/services/owners.service";
+import { OwnerDetailComponent } from './users/pages/owner-detail/owner-detail.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import { ParkingBookComponent } from './parking/pages/parking-book/parking-book.
     OwnersComponent,
     RegisterComponent,
     DriverDetailComponent,
-    ParkingBookComponent
+    ParkingBookComponent,
+    OwnerDetailComponent
   ],
     imports: [
         NgApexchartsModule,
@@ -67,7 +72,7 @@ import { ParkingBookComponent } from './parking/pages/parking-book/parking-book.
         MatSelectModule,
         MatSidenavModule
     ],
-  providers: [],
+  providers: [ParkingLotsListService, DriversService, OwnersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ParkingLotsListService} from "../../services/parking-lots-list.service";
+import {ParkingLot} from "../../model/parking-lot";
 
 @Component({
   selector: 'app-parking-information',
@@ -9,9 +10,11 @@ import {ParkingLotsListService} from "../../services/parking-lots-list.service";
 })
 export class ParkingInformationComponent implements OnInit {
   id!:number;
-  parkingLot:any;
+  parkingLot:ParkingLot;
 
-  constructor(private route:ActivatedRoute, private parkingLotListService: ParkingLotsListService) { }
+  constructor(private route:ActivatedRoute, private parkingLotListService: ParkingLotsListService) {
+    this.parkingLot = {} as ParkingLot;
+  }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['idParking'];

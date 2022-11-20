@@ -1,18 +1,28 @@
-<h1>Create you booking</h1>
+<h1>Choose your car to complete your booking</h1>
+
 <mat-form-field appearance="outline">
-  <mat-label>Brand</mat-label>
+  <mat-label>Car Brand</mat-label>
   <input matInput required [(ngModel)]="carData.brand">
 </mat-form-field>
 <mat-form-field appearance="outline">
-  <mat-label>Model</mat-label>
+  <mat-label>Car Model</mat-label>
   <input matInput required [(ngModel)]="carData.model">
 </mat-form-field>
 <mat-form-field appearance="outline">
-  <mat-label>Color</mat-label>
+  <mat-label>Car Color</mat-label>
   <input matInput required [(ngModel)]="carData.color">
 </mat-form-field>
 <mat-form-field appearance="outline">
   <mat-label>Plate Number</mat-label>
   <input matInput required [(ngModel)]="carData.plateNumber">
 </mat-form-field>
-<button mat-button color="primary" (click)="createBooking()">Create booking</button>
+<button (click)="addNewCar()">Add a new Car</button>
+
+<mat-card *ngFor="let car of cars" class="article-card" style="flex: 1 1 auto;">
+  <mat-card-title>{{ car.brand }}</mat-card-title>
+  <mat-card-subtitle>{{ car.model }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{ car.color }}</p>
+  </mat-card-content>
+  <button (click)="createBooking(car.id)">Create booking</button>
+</mat-card>
