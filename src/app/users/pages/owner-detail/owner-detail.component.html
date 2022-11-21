@@ -1,1 +1,12 @@
-<p>owner-detail works!</p>
+<h1>Hello {{owner.name}}!</h1>
+<h3>In this space there are your parking lots</h3>
+<mat-card *ngFor="let parking of parkingLots" class="article-card" style="flex: 1 1 auto;">
+  <mat-card-title>{{ parking.name }}</mat-card-title>
+  <mat-card-subtitle>{{ parking.location }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{ parking.costHours }}</p> <br>
+    <p>{{ parking.hoursOfAttention }}</p>
+  </mat-card-content>
+  <button [routerLink]="[parking.id]">Edit/Delete</button>
+</mat-card>
+<button [routerLink]="['createParking']">Add New Parking</button>

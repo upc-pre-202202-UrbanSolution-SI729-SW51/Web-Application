@@ -9,6 +9,9 @@ import {OwnersComponent} from "./users/pages/owners/owners.component";
 import {RegisterComponent} from "./users/pages/register/register.component";
 import {DriverDetailComponent} from "./users/pages/driver-detail/driver-detail.component";
 import {ParkingBookComponent} from "./parking/pages/parking-book/parking-book.component";
+import {OwnerDetailComponent} from "./users/pages/owner-detail/owner-detail.component";
+import {ParkingCreateComponent} from "./parking/pages/parking-create/parking-create.component";
+import {ParkingEditDeleteComponent} from "./parking/pages/parking-edit-delete/parking-edit-delete.component";
 
 
 const routes: Routes = [
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'drivers/:idDriver/:car/:idParking/book', component: ParkingBookComponent},
   { path: 'owners', component: OwnersComponent},
   { path: 'owners/register', component: RegisterComponent},
+  { path: 'owners/:idOwner', component: OwnerDetailComponent},
+  { path: 'owners/:idOwner/createParking', component: ParkingCreateComponent},
+  { path: 'owners/:idOwner/:idParking', component: ParkingEditDeleteComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ];
