@@ -2,12 +2,14 @@
   <h2>There are no bookings yet. Go make some!</h2>
 </ng-container>
 <ng-template #elseTemplate>
+  <h2>Your Bookings</h2>
   <mat-card *ngFor="let booking of bookings" class="article-card" style="flex: 1 1 auto;">
     <mat-card-title>Status: {{ booking.status }}</mat-card-title>
-    <mat-card-subtitle>{{ booking.idParkingLot }}</mat-card-subtitle>
-    <mat-card-subtitle>S/. {{ booking.idDriver }} x hour</mat-card-subtitle>
+    <mat-card-subtitle>{{ booking.parkingLot.name }} S/. {{ booking.parkingLot.costHours }} x hour</mat-card-subtitle>
     <mat-card-content>
-      <p>Booked with car brand: {{ booking.carId }}</p>
+      <p>The user <strong>{{booking.driver.name}}</strong> booked this parking lot</p>
+      <p>Booked with car brand: {{ booking.car.brand }}</p>
+      <p>Model: {{ booking.car.model }}</p>
     </mat-card-content>
     <button (click)="deleteBooking(booking.id)">Delete Booking</button>
   </mat-card>

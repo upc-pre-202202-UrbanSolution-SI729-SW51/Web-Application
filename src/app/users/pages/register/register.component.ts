@@ -8,6 +8,7 @@ import {User} from "../../model/user";
 import {ParkingLot} from "../../../parking/model/parking-lot";
 import {Car} from "../../../parking/model/car";
 import {ParkingLotsListService} from "../../../parking/services/parking-lots-list.service";
+import {CarsService} from "../../../parking/services/cars.service";
 
 @Component({
   selector: 'app-register',
@@ -23,13 +24,14 @@ export class RegisterComponent implements OnInit {
 
   drivers: Array<Driver> = [];
   owners: Array<Owner> = [];
-  cars: Array<Car> = [];
+  carsUser: Array<Car> = [];
+  cars: Array<any> = [];
   parkingLotsUser: Array<ParkingLot> = [];
   parkingLots: Array<any> = [];
   isDriver: boolean | undefined;
 
   constructor(private driversService: DriversService, private ownersService: OwnersService,
-              private parkingLotsListService: ParkingLotsListService,
+              private parkingLotsListService: ParkingLotsListService, private carsService: CarsService,
               private router: Router, private route: ActivatedRoute) {
     this.userData = {} as User;
     this.driverData = {} as Driver;
@@ -44,18 +46,25 @@ export class RegisterComponent implements OnInit {
     this.parkingLotsListService.getAll().subscribe((response: any) =>{
       this.parkingLots=response;
     })
+    this.carsService.getAll().subscribe((response: any) =>{
+      this.cars=response;
+    })
   }
 
   addUser() {
     if (this.userData.userType=='drivers') {
-      this.carData.id=1;
-      this.cars.push(this.carData);
+      this.carsUser.push(this.carData);
 
+      this.carsService.create(this.carData).subscribe(() => {
+        this.carsUser.push(this.carData);
+      });
+      this.carData.id=this.cars.length+1;
       this.driverData.name=this.userData.name;
       this.driverData.lastName=this.userData.lastName;
       this.driverData.idType=this.userData.idType;
       this.driverData.idNumber=this.userData.idNumber;
-      this.driverData.cars=this.cars;
+      this.carsUser[0]=this.carData;
+      this.driverData.cars=this.carsUser;
 
       this.driversService.create(this.driverData).subscribe(() => {
         this.drivers.push(this.driverData);

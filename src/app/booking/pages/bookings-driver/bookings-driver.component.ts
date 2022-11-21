@@ -9,20 +9,16 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./bookings-driver.component.css']
 })
 export class BookingsDriverComponent implements OnInit {
-  driver:any;
-  parkingLot:any;
-
   idDriver!:number;
-  bookings: Array<Booking> = [];
+  bookings: Array<any> = [];
   noBookings: boolean | undefined;
 
-  constructor(private bookingService: BookingsService, private route:ActivatedRoute,) { }
+  constructor(private bookingService: BookingsService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.idDriver = this.route.snapshot.params['idDriver'];
     this.bookingService.getAll().subscribe((response: any) => {
-      this.bookings=response;
-      //this.bookings=response.filter((booking: Booking) => booking.driver.id==this.idDriver);
+      this.bookings=response.filter((booking: Booking) => booking.driver.id==this.idDriver);
       this.noBookings = this.bookings.length == 0;
     })
   }

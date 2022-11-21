@@ -23,7 +23,6 @@ import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
-import { ParkingInformationComponent } from './parking/pages/parking-information/parking-information.component';
 import { HomeComponent } from './public/pages/home/home.component';
 import { DriversComponent } from './users/pages/drivers/drivers.component';
 import { OwnersComponent } from './users/pages/owners/owners.component';
@@ -38,13 +37,13 @@ import { ParkingCreateComponent } from './parking/pages/parking-create/parking-c
 import { ParkingEditDeleteComponent } from './parking/pages/parking-edit-delete/parking-edit-delete.component';
 import { BookingsDriverComponent } from './booking/pages/bookings-driver/bookings-driver.component';
 import { BookingsOwnerComponent } from './booking/pages/bookings-owner/bookings-owner.component';
+import { ConfirmBookingComponent } from './booking/pages/confirm-booking/confirm-booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     ParkingLotsListComponent,
-    ParkingInformationComponent,
     HomeComponent,
     DriversComponent,
     OwnersComponent,
@@ -55,7 +54,8 @@ import { BookingsOwnerComponent } from './booking/pages/bookings-owner/bookings-
     ParkingCreateComponent,
     ParkingEditDeleteComponent,
     BookingsDriverComponent,
-    BookingsOwnerComponent
+    BookingsOwnerComponent,
+    ConfirmBookingComponent
   ],
     imports: [
         NgApexchartsModule,

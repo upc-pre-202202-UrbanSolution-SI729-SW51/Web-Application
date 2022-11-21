@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ParkingLot} from "../../model/parking-lot";
 import {ParkingLotsListService} from "../../services/parking-lots-list.service";
-import {Driver} from "../../../users/model/driver";
-import {DriversService} from "../../../users/services/drivers.service";
 import {ActivatedRoute} from "@angular/router";
 import {Owner} from "../../../users/model/owner";
 import {OwnersService} from "../../../users/services/owners.service";
@@ -37,8 +35,8 @@ export class ParkingCreateComponent implements OnInit {
     })
   }
 
-  updateDriver() {
-    this.id = this.route.snapshot.params['idDriver'];
+  updateOwner() {
+    this.id = this.route.snapshot.params['idOwner'];
     this.ownersService.update(this.owner.id, this.owner)
       .subscribe((response: any) => {
         this.drivers = this.drivers
@@ -58,7 +56,6 @@ export class ParkingCreateComponent implements OnInit {
       this.parkingLots.push(this.parkingData);
     });
     this.owner.parkingLots.push(this.parkingData);
-    console.log(this.owner);
-    this.updateDriver();
+    this.updateOwner();
   }
 }

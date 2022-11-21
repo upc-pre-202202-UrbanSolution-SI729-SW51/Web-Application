@@ -18,11 +18,11 @@
 </mat-form-field>
 <button (click)="addNewCar()">Add a new Car</button>
 
-<mat-card *ngFor="let car of cars" class="article-card" style="flex: 1 1 auto;">
+<mat-card *ngFor="let car of carsFromUser" class="article-card" style="flex: 1 1 auto;">
   <mat-card-title>{{ car.brand }}</mat-card-title>
   <mat-card-subtitle>{{ car.model }}</mat-card-subtitle>
   <mat-card-content>
     <p>{{ car.color }}</p>
   </mat-card-content>
-  <button (click)="createBooking(car.id)">Create booking</button>
+  <button [routerLink]="[car.id]">Create booking</button>
 </mat-card>

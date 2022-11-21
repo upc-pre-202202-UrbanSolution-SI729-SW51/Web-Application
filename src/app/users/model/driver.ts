@@ -6,5 +6,5 @@ export interface Driver {
   lastName: string;
   idType: string;
   idNumber: string;
-  cars: Car[];
+  cars: Array<Car>;
 }
