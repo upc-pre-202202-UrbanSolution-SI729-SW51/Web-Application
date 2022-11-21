@@ -16,4 +16,11 @@
   <mat-label>Cost by Hour</mat-label>
   <input matInput required [(ngModel)]="parkingData.costHours">
 </mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Accept 4x4 Truck?</mat-label>
+  <mat-select [(ngModel)]="accept4x4truck">
+    <mat-option value="yes">Yes</mat-option>
+    <mat-option value="no">No</mat-option>
+  </mat-select>
+</mat-form-field>
 <button (click)="addNewParking()">Add a new Parking</button>

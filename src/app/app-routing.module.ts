@@ -12,7 +12,8 @@ import {ParkingBookComponent} from "./parking/pages/parking-book/parking-book.co
 import {OwnerDetailComponent} from "./users/pages/owner-detail/owner-detail.component";
 import {ParkingCreateComponent} from "./parking/pages/parking-create/parking-create.component";
 import {ParkingEditDeleteComponent} from "./parking/pages/parking-edit-delete/parking-edit-delete.component";
-import {BookingsComponent} from "./booking/pages/bookings/bookings.component";
+import {BookingsDriverComponent} from "./booking/pages/bookings-driver/bookings-driver.component";
+import {BookingsOwnerComponent} from "./booking/pages/bookings-owner/bookings-owner.component";
 
 
 const routes: Routes = [
@@ -20,13 +21,14 @@ const routes: Routes = [
   { path: 'drivers', component: DriversComponent},
   { path: 'drivers/register', component: RegisterComponent},
   { path: 'drivers/:idDriver', component: DriverDetailComponent},
-  { path: 'drivers/:idDriver/bookings', component: BookingsComponent},
+  { path: 'drivers/:idDriver/bookings-driver', component: BookingsDriverComponent},
   { path: 'drivers/:idDriver/:car', component: ParkingLotsListComponent},
   { path: 'drivers/:idDriver/:car/:idParking', component: ParkingInformationComponent},
   { path: 'drivers/:idDriver/:car/:idParking/book', component: ParkingBookComponent},
   { path: 'owners', component: OwnersComponent},
   { path: 'owners/register', component: RegisterComponent},
   { path: 'owners/:idOwner', component: OwnerDetailComponent},
+  { path: 'owners/:idOwner/bookings-owner', component: BookingsOwnerComponent},
   { path: 'owners/:idOwner/createParking', component: ParkingCreateComponent},
   { path: 'owners/:idOwner/:idParking', component: ParkingEditDeleteComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},

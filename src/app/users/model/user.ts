@@ -4,4 +4,5 @@ export interface User {
   lastName: string;
   idType: string;
   idNumber: string;
+  accept4x4Truck: string;
 }

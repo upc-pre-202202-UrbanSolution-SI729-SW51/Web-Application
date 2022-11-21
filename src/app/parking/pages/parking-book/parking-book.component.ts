@@ -4,6 +4,9 @@ import {DriversService} from "../../../users/services/drivers.service";
 import {ParkingLotsListService} from "../../services/parking-lots-list.service";
 import {Car} from "../../model/car";
 import {ParkingLot} from "../../model/parking-lot";
+import {BookingsService} from "../../../booking/services/bookings.service";
+import {Booking} from "../../../booking/model/booking";
+import {Owner} from "../../../users/model/owner";
 
 @Component({
   selector: 'app-parking-book',
@@ -14,15 +17,19 @@ export class ParkingBookComponent implements OnInit {
   driver:any;
   parkingLot:any;
   carData: Car;
+  bookingData: Booking;
   idDriver!:number;
   idParking!:number;
 
   cars: Array<any> = [];
   drivers: Array<any> = [];
+  bookings: Array<Booking> = [];
 
-  constructor(private route:ActivatedRoute, private driversService: DriversService,
-              private parkingLotsListService: ParkingLotsListService, private router: Router) {
+  constructor(private route:ActivatedRoute, private router: Router,
+              private driversService: DriversService, private parkingLotsListService: ParkingLotsListService,
+              private bookingsService: BookingsService) {
     this.carData = {} as Car;
+    this.bookingData = {} as Booking;
   }
 
   ngOnInit(): void {
@@ -39,13 +46,15 @@ export class ParkingBookComponent implements OnInit {
   }
 
   createBooking(id: number) {
-    console.log(this.driver.name);
-    console.log(this.driver.lastName);
-    console.log(this.parkingLot.name);
-    console.log(this.parkingLot.location);
-    console.log(this.cars[id-1].brand);
-    console.log(this.cars[id-1].color);
-    this.router.navigate(['/drivers',this.driver.id,'bookings']);
+    this.bookingData.idDriver=this.driver.id;
+    this.bookingData.carId=id;
+    this.bookingData.idParkingLot=this.parkingLot.id;
+    this.bookingData.status="Booked";
+
+    this.bookingsService.create(this.bookingData).subscribe(() => {
+      this.bookings.push(this.bookingData);
+    });
+    this.router.navigate(['/drivers',this.driver.id,'bookings-driver']);
   }
 
   addNewCar() {

@@ -131,6 +131,14 @@
       "hoursOfAttention": "10:00-22:00",
       "costHours": 2,
       "accept4x4Truck": true
+    },
+    {
+      "name": "Molina Plaza",
+      "location": "Av. Raul Ferrero 250",
+      "hoursOfAttention": "10:00-21:00",
+      "costHours": "8",
+      "accept4x4Truck": true,
+      "id": 6
     }
   ],
   "owners": [
@@ -200,6 +208,39 @@
         }
       ],
       "id": 3
+    },
+    {
+      "name": "Marco",
+      "lastName": "Enriquez",
+      "idType": "dni",
+      "idNumber": "25489165",
+      "parkingLots": [
+        {
+          "id": 6,
+          "name": "Molina Plaza",
+          "location": "Av. Raul Ferrero 250",
+          "hoursOfAttention": "10:00-21:00",
+          "costHours": "8",
+          "accept4x4Truck": true
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "bookings": [
+    {
+      "idDriver": 1,
+      "carId": 2,
+      "idParkingLot": 1,
+      "status": "Booked",
+      "id": 1
+    },
+    {
+      "idDriver": 8,
+      "carId": 1,
+      "idParkingLot": 1,
+      "status": "Booked",
+      "id": 2
     }
   ]
 }

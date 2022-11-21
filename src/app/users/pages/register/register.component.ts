@@ -24,7 +24,8 @@ export class RegisterComponent implements OnInit {
   drivers: Array<Driver> = [];
   owners: Array<Owner> = [];
   cars: Array<Car> = [];
-  parkingLots: Array<ParkingLot> = [];
+  parkingLotsUser: Array<ParkingLot> = [];
+  parkingLots: Array<any> = [];
   isDriver: boolean | undefined;
 
   constructor(private driversService: DriversService, private ownersService: OwnersService,
@@ -40,9 +41,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.userData.userType=this.route.snapshot.url[0].path;
     this.isDriver = this.userData.userType == 'drivers';
+    this.parkingLotsListService.getAll().subscribe((response: any) =>{
+      this.parkingLots=response;
+    })
   }
 
-  addDriver() {
+  addUser() {
     if (this.userData.userType=='drivers') {
       this.carData.id=1;
       this.cars.push(this.carData);
@@ -58,17 +62,20 @@ export class RegisterComponent implements OnInit {
       });
     }
     else {
-      this.parkingLots.push(this.parkingData);
+      this.parkingData.accept4x4Truck = this.userData.accept4x4Truck == "yes";
+      this.parkingLotsUser.push(this.parkingData);
+
       this.parkingLotsListService.create(this.parkingData).subscribe(() => {
-        this.parkingLots.push(this.parkingData);
+        this.parkingLotsUser.push(this.parkingData);
       });
-      this.parkingLots[0].id=1;
+      this.parkingData.id=this.parkingLots.length+1;
       this.ownerData.name=this.userData.name;
       this.ownerData.lastName=this.userData.lastName;
       this.ownerData.idType=this.userData.idType;
       this.ownerData.idNumber=this.userData.idNumber;
-      this.ownerData.parkingLots=this.parkingLots;
 
+      this.parkingLotsUser[0]=this.parkingData;
+      this.ownerData.parkingLots=this.parkingLotsUser;
       this.ownersService.create(this.ownerData).subscribe(() => {
         this.owners.push(this.ownerData);
       });
