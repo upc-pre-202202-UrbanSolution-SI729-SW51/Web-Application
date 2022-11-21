@@ -1,139 +1,483 @@
 {
   "drivers": [
     {
+      "name": "Mel",
+      "lastName": "Espinoza",
+      "idType": "dni",
+      "idNumber": "73286417",
       "id": 1,
-      "name": "Frank",
-      "birthDate": "20/12/1980",
-      "creditCard": "MasterCard",
-      "numberCreditCard": "1234567891234536"
+      "cars": [
+        {
+          "id": 1,
+          "brand": "Toyota",
+          "model": "Corolla",
+          "color": "Black",
+          "plateNumber": "BK3-623"
+        },
+        {
+          "brand": "Audi",
+          "model": "A-5",
+          "color": "Grey",
+          "plateNumber": "BFH-827",
+          "id": 2
+        }
+      ]
     },
     {
+      "name": "Ricardo",
+      "lastName": "Moran",
+      "idType": "passport",
+      "idNumber": "4156877924",
       "id": 2,
-      "name": "jaret",
-      "birthDate": "20/12/1982",
-      "creditCard": "Visa",
-      "numberCreditCard": "123452789123456"
+      "cars": [
+        {
+          "id": 3,
+          "brand": "Toyota",
+          "model": "Yaris",
+          "color": "Green",
+          "plateNumber": "JDF-647"
+        },
+        {
+          "brand": "Suzuki",
+          "model": "Alto",
+          "color": "Grey",
+          "plateNumber": "SD0-425",
+          "id": 7
+        }
+      ]
     },
     {
-      "id": 3,
       "name": "Luis",
-      "birthDate": "20/12/1988",
-      "creditCard": "Visa",
-      "numberCreditCard": "123456789123456"
+      "lastName": "Fernandez",
+      "idType": "dni",
+      "idNumber": "74915628",
+      "id": 3,
+      "cars": [
+        {
+          "id": 4,
+          "brand": "Mazda",
+          "model": "CX-3",
+          "color": "Red",
+          "plateNumber": "AW5-235"
+        }
+      ]
     },
     {
-      "id": 4,
-      "name": "Jose",
-      "birthDate": "20/12/1989",
-      "creditCard": "Visa",
-      "numberCreditCard": "123456788123456"
+      "name": "Pedro",
+      "lastName": "Vertiz",
+      "idType": "dni",
+      "idNumber": "75689425",
+      "cars": [
+        {
+          "brand": "Nissan",
+          "model": "Mazda",
+          "color": "Blanco",
+          "plateNumber": "KF9-549",
+          "id": 5
+        }
+      ],
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Tom",
-      "birthDate": "20/12/1985",
-      "creditCard": "MasterCard",
-      "numberCreditCard": "123456789443456"
+      "name": "Alessandro",
+      "lastName": "Vega",
+      "idType": "dni",
+      "idNumber": "79524197",
+      "cars": [
+        {
+          "brand": "Mitsubishi",
+          "model": "Mazda",
+          "color": "Blue",
+          "plateNumber": "COZ-235",
+          "id": 6
+        }
+      ],
+      "id": 5
     }
   ],
-  "parkings": [
+  "parking-lots": [
     {
       "id": 1,
-      "name": "Parking jockey",
-      "location": "Av.Javier Prado",
-      "hoursOfAttention": "9:00-24:00",
-      "costHours": 3
+      "name": "Jockey Plaza",
+      "location": "Av. Javier Prado",
+      "hoursOfAttention": "10:00-22:00",
+      "costHours": 3,
+      "accept4x4Truck": true
     },
     {
       "id": 2,
-      "name": "Parking Mega plaza",
-      "location": "Av.via expresa",
-      "hoursOfAttention": "9:00-24:00",
-      "costHours": 3
-
+      "name": "Mega Plaza",
+      "location": "Av. Via Expresa",
+      "hoursOfAttention": "10:00-22:00",
+      "costHours": 3,
+      "accept4x4Truck": false
     },
     {
       "id": 3,
-      "name": "Mall de sur",
-      "location": "Carretera central km 23",
-      "hoursOfAttention": "9:00-24:00",
-      "costHours": 3
-
+      "name": "Mall del Sur",
+      "location": "Carretera Central Km 23",
+      "hoursOfAttention": "10:00-22:00",
+      "costHours": 3,
+      "accept4x4Truck": true
     },
     {
       "id": 4,
-      "name": "Mall santa anita",
-      "location": "Av.Carretera Central km 13",
-      "hoursOfAttention": "9:00-24:00",
-      "costHours": 5
-
+      "name": "Mall Aventura",
+      "location": "Av. Nicolas Ayllon, Santa Anita 15008",
+      "hoursOfAttention": "10:00-22:00",
+      "costHours": 5,
+      "accept4x4Truck": false
     },
     {
       "id": 5,
-      "name": "Rambla",
-      "location": "Av.Javier Prado",
-      "hoursOfAttention": "9:00-24:00",
-      "costHours": 2
-
+      "name": "La Rambla",
+      "location": "Av. Javier Prado Este 2050, San Borja",
+      "hoursOfAttention": "10:00-22:00",
+      "costHours": 2,
+      "accept4x4Truck": true
+    },
+    {
+      "name": "Molina Plaza",
+      "location": "Av. Raul Ferrero 250",
+      "hoursOfAttention": "10:00-21:00",
+      "costHours": "8",
+      "accept4x4Truck": true,
+      "id": 6
     }
   ],
-  "parkingStatus": [
+  "owners": [
+    {
+      "name": "Giovanna",
+      "lastName": "Hernandez",
+      "idType": "dni",
+      "idNumber": "54862135",
+      "parkingLots": [
+        {
+          "id": 1,
+          "name": "Jockey Plaza",
+          "location": "Av. Javier Prado",
+          "hoursOfAttention": "10:00-22:00",
+          "costHours": 3,
+          "accept4x4Truck": true
+        },
+        {
+          "id": 2,
+          "name": "Mega Plaza",
+          "location": "Av. Via Expresa",
+          "hoursOfAttention": "10:00-22:00",
+          "costHours": 3,
+          "accept4x4Truck": false
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Eduardo",
+      "lastName": "Morales",
+      "idType": "dni",
+      "idNumber": "46578942",
+      "parkingLots": [
+        {
+          "id": 3,
+          "name": "Mall del Sur",
+          "location": "Carretera Central Km 23",
+          "hoursOfAttention": "10:00-22:00",
+          "costHours": 3,
+          "accept4x4Truck": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Gustavo",
+      "lastName": "Villa",
+      "idType": "dni",
+      "idNumber": "78425964",
+      "parkingLots": [
+        {
+          "id": 4,
+          "name": "Mall Aventura",
+          "location": "Av. Nicolas Ayllon, Santa Anita 15008",
+          "hoursOfAttention": "10:00-22:00",
+          "costHours": 5,
+          "accept4x4Truck": false
+        },
+        {
+          "id": 5,
+          "name": "La Rambla",
+          "location": "Av. Javier Prado Este 2050, San Borja",
+          "hoursOfAttention": "10:00-22:00",
+          "costHours": 2,
+          "accept4x4Truck": true
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Marco",
+      "lastName": "Enriquez",
+      "idType": "dni",
+      "idNumber": "25489165",
+      "parkingLots": [
+        {
+          "id": 6,
+          "name": "Molina Plaza",
+          "location": "Av. Raul Ferrero 250",
+          "hoursOfAttention": "10:00-21:00",
+          "costHours": "8",
+          "accept4x4Truck": true
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "bookings": [
+    {
+      "driver": {
+        "name": "Ricardo",
+        "lastName": "Moran",
+        "idType": "passport",
+        "idNumber": "4156877924",
+        "id": 2,
+        "cars": [
+          {
+            "id": 3,
+            "brand": "Toyota",
+            "model": "Yaris",
+            "color": "Green",
+            "plateNumber": "JDF-647"
+          },
+          {
+            "brand": "Suzuki",
+            "model": "Alto",
+            "color": "Grey",
+            "plateNumber": "SD0-425",
+            "id": 7
+          }
+        ]
+      },
+      "car": {
+        "brand": "Suzuki",
+        "model": "Alto",
+        "color": "Grey",
+        "plateNumber": "SD0-425",
+        "id": 7
+      },
+      "parkingLot": {
+        "id": 3,
+        "name": "Mall del Sur",
+        "location": "Carretera Central Km 23",
+        "hoursOfAttention": "10:00-22:00",
+        "costHours": 3,
+        "accept4x4Truck": true
+      },
+      "status": "Completed",
+      "id": 2
+    },
+    {
+      "driver": {
+        "name": "Ricardo",
+        "lastName": "Moran",
+        "idType": "passport",
+        "idNumber": "4156877924",
+        "id": 2,
+        "cars": [
+          {
+            "id": 3,
+            "brand": "Toyota",
+            "model": "Yaris",
+            "color": "Green",
+            "plateNumber": "JDF-647"
+          },
+          {
+            "brand": "Suzuki",
+            "model": "Alto",
+            "color": "Grey",
+            "plateNumber": "SD0-425",
+            "id": 7
+          }
+        ]
+      },
+      "car": {
+        "brand": "Suzuki",
+        "model": "Alto",
+        "color": "Grey",
+        "plateNumber": "SD0-425",
+        "id": 7
+      },
+      "parkingLot": {
+        "id": 1,
+        "name": "Jockey Plaza",
+        "location": "Av. Javier Prado",
+        "hoursOfAttention": "10:00-22:00",
+        "costHours": 3,
+        "accept4x4Truck": true
+      },
+      "status": "Completed",
+      "id": 3
+    },
+    {
+      "driver": {
+        "name": "Pedro",
+        "lastName": "Vertiz",
+        "idType": "dni",
+        "idNumber": "75689425",
+        "cars": [
+          {
+            "brand": "Nissan",
+            "model": "Mazda",
+            "color": "Blanco",
+            "plateNumber": "KF9-549",
+            "id": 5
+          }
+        ],
+        "id": 4
+      },
+      "car": {
+        "brand": "Nissan",
+        "model": "Mazda",
+        "color": "Blanco",
+        "plateNumber": "KF9-549",
+        "id": 5
+      },
+      "parkingLot": {
+        "id": 2,
+        "name": "Mega Plaza",
+        "location": "Av. Via Expresa",
+        "hoursOfAttention": "10:00-22:00",
+        "costHours": 3,
+        "accept4x4Truck": false
+      },
+      "status": "Booked",
+      "id": 4
+    },
+    {
+      "driver": {
+        "name": "Alessandro",
+        "lastName": "Vega",
+        "idType": "dni",
+        "idNumber": "79524197",
+        "cars": [
+          {
+            "brand": "Mitsubishi",
+            "model": "Mazda",
+            "color": "Blue",
+            "plateNumber": "COZ-235",
+            "id": 6
+          }
+        ],
+        "id": 5
+      },
+      "car": {
+        "brand": "Mitsubishi",
+        "model": "Mazda",
+        "color": "Blue",
+        "plateNumber": "COZ-235",
+        "id": 6
+      },
+      "parkingLot": {
+        "name": "Molina Plaza",
+        "location": "Av. Raul Ferrero 250",
+        "hoursOfAttention": "10:00-21:00",
+        "costHours": "8",
+        "accept4x4Truck": true,
+        "id": 6
+      },
+      "status": "Booked",
+      "id": 5
+    },
+    {
+      "driver": {
+        "name": "Mel",
+        "lastName": "Espinoza",
+        "idType": "dni",
+        "idNumber": "73286417",
+        "id": 1,
+        "cars": [
+          {
+            "id": 1,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "color": "Black",
+            "plateNumber": "BK3-623"
+          },
+          {
+            "brand": "Audi",
+            "model": "A-5",
+            "color": "Grey",
+            "plateNumber": "BFH-827",
+            "id": 2
+          }
+        ]
+      },
+      "car": {
+        "brand": "Audi",
+        "model": "A-5",
+        "color": "Grey",
+        "plateNumber": "BFH-827",
+        "id": 2
+      },
+      "parkingLot": {
+        "id": 4,
+        "name": "Mall Aventura",
+        "location": "Av. Nicolas Ayllon, Santa Anita 15008",
+        "hoursOfAttention": "10:00-22:00",
+        "costHours": 5,
+        "accept4x4Truck": false
+      },
+      "status": "Booked",
+      "id": 6
+    }
+  ],
+  "cars": [
     {
       "id": 1,
-      "parking_id": 2,
-      "Driver_id": 1,
-      "status": "reserved",
-      "StarTime": "10:00",
-      "EndTime": "14:00",
-      "NumberHours": 4
+      "brand": "Toyota",
+      "model": "Corolla",
+      "color": "Black",
+      "plateNumber": "BK3-623"
     },
     {
-      "id": 2,
-      "parking_id": 3,
-      "Driver_id": 1,
-      "status": "reserved",
-      "StarTime": "10:00",
-      "EndTime": "15:00",
-      "NumberHours": 5
+      "brand": "Audi",
+      "model": "A-5",
+      "color": "Grey",
+      "plateNumber": "BFH-827",
+      "id": 2
     },
     {
       "id": 3,
-      "parking_id": 4,
-      "Driver_id": 2,
-      "status": "reserved",
-      "StarTime": "10:00",
-      "EndTime": "16:00",
-      "NumberHours": 2
+      "brand": "Toyota",
+      "model": "Yaris",
+      "color": "Green",
+      "plateNumber": "JDF-647"
     },
     {
       "id": 4,
-      "parking_id": 2,
-      "Driver_id": 4,
-      "status": "reserved",
-      "StarTime": "10:00",
-      "EndTime": "15:00",
-      "NumberHours": 5
+      "brand": "Mazda",
+      "model": "CX-3",
+      "color": "Red",
+      "plateNumber": "AW5-235"
     },
     {
-      "id": 5,
-      "parking_id": 2,
-      "Driver_id": 3,
-      "status": "reserved",
-      "StarTime": "10:00",
-      "EndTime": "14:00",
-      "NumberHours": 4
+      "brand": "Nissan",
+      "model": "Mazda",
+      "color": "Blanco",
+      "plateNumber": "KF9-549",
+      "id": 5
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "Mazda",
+      "color": "Blue",
+      "plateNumber": "COZ-235",
+      "id": 6
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Alto",
+      "color": "Grey",
+      "plateNumber": "SD0-425",
+      "id": 7
     }
-  ],
-  "ParkingHistory": [
-  {
-    "id": 1,
-    "Reservation_id": 1,
-    "Name": "Eclair",
-    "NameOfParking": "262",
-    "Location": "16",
-    "HoursOfState": 23,
-    "CostHours": 6,
-    "Total": 6
-  }
   ]
 }

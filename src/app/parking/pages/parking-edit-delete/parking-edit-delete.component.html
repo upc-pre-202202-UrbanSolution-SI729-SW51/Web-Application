@@ -1,0 +1,19 @@
+<h1>Create new Parking</h1>
+
+<mat-form-field appearance="outline">
+  <mat-label>Parking Name</mat-label>
+  <input matInput required [(ngModel)]="parkingData.name">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Parking Location</mat-label>
+  <input matInput required [(ngModel)]="parkingData.location">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Hours of Attention</mat-label>
+  <input matInput required [(ngModel)]="parkingData.hoursOfAttention">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Cost by Hour</mat-label>
+  <input matInput required [(ngModel)]="parkingData.costHours">
+</mat-form-field>
+<button (click)="updateParking()">Edit Parking</button>

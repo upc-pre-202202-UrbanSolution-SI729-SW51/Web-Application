@@ -7,6 +7,15 @@ import {NgForm} from "@angular/forms";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {ParkingLotsService} from "../../services/parking-lots/parking-lots.service";
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSliderModule} from '@angular/material/slider';
+
+
 
 @Component({
   selector: 'app-parking-lots',
@@ -118,5 +127,4 @@ export class ParkingLotsComponent implements OnInit,AfterViewInit {
       console.log('Invalid data');
     }
   }
-
 }

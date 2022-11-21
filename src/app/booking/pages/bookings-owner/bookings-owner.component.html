@@ -1,0 +1,16 @@
+<ng-container *ngIf="noBookings; else elseTemplate">
+  <h2>There are no bookings yet. Wait until some came to the system</h2>
+</ng-container>
+<ng-template #elseTemplate>
+  <h2>This parking lot bookings</h2>
+  <mat-card *ngFor="let booking of bookings" class="article-card" style="flex: 1 1 auto;">
+    <mat-card-title>Status: {{ booking.status }}</mat-card-title>
+    <mat-card-subtitle>{{booking.driver.name}} booked this parking lot named</mat-card-subtitle>
+    <mat-card-subtitle>{{ booking.parkingLot.name }} at S/. {{ booking.parkingLot.costHours }} x hour</mat-card-subtitle>
+    <mat-card-content>
+      <p>Booked with car brand: {{ booking.car.brand }}</p>
+      <p>Model: {{ booking.car.model }}</p>
+    </mat-card-content>
+    <button (click)="completeBooking(booking.id)">Complete Booking</button>
+  </mat-card>
+</ng-template>

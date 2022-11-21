@@ -17,23 +17,45 @@ import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
-import { ParkingLotsComponent } from './parking/pages/parking-lots/parking-lots.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import{NgApexchartsModule} from "ng-apexcharts";
-import { ReservationComponent } from './parking/pages/reservation/reservation.component';
-import { ReservationHistoryComponent } from './parking/pages/reservation-history/reservation-history.component';
-import {ParkingLotsService} from "./parking/services/parking-lots/parking-lots.service";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { ParkingLotsListComponent } from './parking/pages/parking-lots-list/parking-lots-list.component';
+import { HomeComponent } from './public/pages/home/home.component';
+import { DriversComponent } from './users/pages/drivers/drivers.component';
+import { OwnersComponent } from './users/pages/owners/owners.component';
+import { RegisterComponent } from './users/pages/register/register.component';
+import { DriverDetailComponent } from './users/pages/driver-detail/driver-detail.component';
+import { ParkingBookComponent } from './parking/pages/parking-book/parking-book.component';
+import {ParkingLotsListService} from "./parking/services/parking-lots-list.service";
+import {DriversService} from "./users/services/drivers.service";
+import {OwnersService} from "./users/services/owners.service";
+import { OwnerDetailComponent } from './users/pages/owner-detail/owner-detail.component';
+import { ParkingCreateComponent } from './parking/pages/parking-create/parking-create.component';
+import { ParkingEditDeleteComponent } from './parking/pages/parking-edit-delete/parking-edit-delete.component';
+import { BookingsDriverComponent } from './booking/pages/bookings-driver/bookings-driver.component';
+import { BookingsOwnerComponent } from './booking/pages/bookings-owner/bookings-owner.component';
+import { ConfirmBookingComponent } from './booking/pages/confirm-booking/confirm-booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParkingLotsComponent,
     PageNotFoundComponent,
-    ReservationComponent,
-    ReservationHistoryComponent
+    ParkingLotsListComponent,
+    HomeComponent,
+    DriversComponent,
+    OwnersComponent,
+    RegisterComponent,
+    DriverDetailComponent,
+    ParkingBookComponent,
+    OwnerDetailComponent,
+    ParkingCreateComponent,
+    ParkingEditDeleteComponent,
+    BookingsDriverComponent,
+    BookingsOwnerComponent,
+    ConfirmBookingComponent
   ],
     imports: [
         NgApexchartsModule,
@@ -58,7 +80,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
         MatSelectModule,
         MatSidenavModule
     ],
-  providers: [ParkingLotsService],
+  providers: [ParkingLotsListService, DriversService, OwnersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
