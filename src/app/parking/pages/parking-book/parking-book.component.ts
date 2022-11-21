@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {DriversService} from "../../../users/services/drivers.service";
 import {ParkingLotsListService} from "../../services/parking-lots-list.service";
 import {Car} from "../../model/car";
+import {ParkingLot} from "../../model/parking-lot";
 
 @Component({
   selector: 'app-parking-book',
@@ -17,6 +18,7 @@ export class ParkingBookComponent implements OnInit {
   idParking!:number;
 
   cars: Array<any> = [];
+  drivers: Array<any> = [];
 
   constructor(private route:ActivatedRoute, private driversService: DriversService,
               private parkingLotsListService: ParkingLotsListService, private router: Router) {
@@ -43,13 +45,25 @@ export class ParkingBookComponent implements OnInit {
     console.log(this.parkingLot.location);
     console.log(this.cars[id-1].brand);
     console.log(this.cars[id-1].color);
-    this.router.navigate(['/drivers',this.driver.id]);
+    this.router.navigate(['/drivers',this.driver.id,'bookings']);
   }
 
   addNewCar() {
     this.carData.id=this.cars.length+1;
-    this.cars.push(this.carData);
+    this.driver.cars.push(this.carData);
+    this.updateCarsFromDriver();
+  }
 
-    console.log(this.cars);
+  updateCarsFromDriver() {
+    this.driversService.update(this.idDriver, this.driver)
+      .subscribe((response: any) => {
+        this.drivers = this.drivers
+          .map((o: ParkingLot) => {
+            if (o.id === response.id) {
+              o = response;
+            }
+            return o;
+          });
+      });
   }
 }

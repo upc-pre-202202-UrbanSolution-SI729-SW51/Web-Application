@@ -13,6 +13,13 @@
           "model": "Corolla",
           "color": "Black",
           "plateNumber": "BK3-623"
+        },
+        {
+          "brand": "Audi",
+          "model": "A-5",
+          "color": "Grey",
+          "plateNumber": "BFH-827",
+          "id": 2
         }
       ]
     },
@@ -66,6 +73,22 @@
         }
       ],
       "id": 7
+    },
+    {
+      "name": "Alessandro",
+      "lastName": "Vega",
+      "idType": "dni",
+      "idNumber": "79524197",
+      "cars": [
+        {
+          "brand": "Mitsubishi",
+          "model": "Mazda",
+          "color": "Blue",
+          "plateNumber": "COZ-235",
+          "id": 1
+        }
+      ],
+      "id": 8
     }
   ],
   "parking-lots": [

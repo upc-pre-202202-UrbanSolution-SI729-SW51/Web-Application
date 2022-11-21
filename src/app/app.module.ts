@@ -36,6 +36,7 @@ import {OwnersService} from "./users/services/owners.service";
 import { OwnerDetailComponent } from './users/pages/owner-detail/owner-detail.component';
 import { ParkingCreateComponent } from './parking/pages/parking-create/parking-create.component';
 import { ParkingEditDeleteComponent } from './parking/pages/parking-edit-delete/parking-edit-delete.component';
+import { BookingsComponent } from './booking/pages/bookings/bookings.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ParkingEditDeleteComponent } from './parking/pages/parking-edit-delete/
     ParkingBookComponent,
     OwnerDetailComponent,
     ParkingCreateComponent,
-    ParkingEditDeleteComponent
+    ParkingEditDeleteComponent,
+    BookingsComponent
   ],
     imports: [
         NgApexchartsModule,
