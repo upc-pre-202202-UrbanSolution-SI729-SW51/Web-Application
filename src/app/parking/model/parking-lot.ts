@@ -1,7 +1,8 @@
 export interface ParkingLot {
   id: number;
-  address: string;
+  name: string;
   location: string;
   hoursOfAttention: string;
   costHours: number;
+  accept4x4Truck: boolean;
 }

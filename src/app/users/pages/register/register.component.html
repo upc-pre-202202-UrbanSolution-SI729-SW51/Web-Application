@@ -1,0 +1,66 @@
+<h1>Enter your details</h1>
+<mat-form-field appearance="outline">
+  <mat-label>Name</mat-label>
+  <input matInput required [(ngModel)]="userData.name">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Last Name</mat-label>
+  <input matInput required [(ngModel)]="userData.lastName">
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Id Type</mat-label>
+  <mat-select [(ngModel)]="userData.idType">
+    <mat-option value="dni">DNI</mat-option>
+    <mat-option value="passport">Passport</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Id Number</mat-label>
+  <input matInput required [(ngModel)]="userData.idNumber">
+</mat-form-field>
+<ng-container *ngIf="isDriver; else elseTemplate">
+  <mat-form-field appearance="outline">
+    <mat-label>Car Brand</mat-label>
+    <input matInput required [(ngModel)]="carData.brand">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Car Model</mat-label>
+    <input matInput required [(ngModel)]="carData.model">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Car Color</mat-label>
+    <input matInput required [(ngModel)]="carData.color">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Plate Number</mat-label>
+    <input matInput required [(ngModel)]="carData.plateNumber">
+  </mat-form-field>
+  <button mat-button color="primary" [routerLink]="['/drivers']">Return</button>
+</ng-container>
+<ng-template #elseTemplate>
+  <mat-form-field appearance="outline">
+    <mat-label>Parking Name</mat-label>
+    <input matInput required [(ngModel)]="parkingData.name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Parking Location</mat-label>
+    <input matInput required [(ngModel)]="parkingData.location">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Hours of Attention</mat-label>
+    <input matInput required [(ngModel)]="parkingData.hoursOfAttention">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cost by Hour</mat-label>
+    <input matInput required [(ngModel)]="parkingData.costHours">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Accept 4x4 Truck?</mat-label>
+    <mat-select [(ngModel)]="userData.accept4x4Truck">
+      <mat-option value="yes">Yes</mat-option>
+      <mat-option value="no">No</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button color="primary" [routerLink]="['/owners']">Return</button>
+</ng-template>
+<button mat-button color="primary" (click)="addUser()">Add</button>

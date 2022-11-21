@@ -1,0 +1,8 @@
+<h3>{{driver.name}}, here are the details of your recently booking</h3>
+<h3>Place: {{parkingLot.name}}</h3>
+<h3>Address: {{parkingLot.location}}</h3>
+<h3>Fee: S/. {{parkingLot.location}} x hour</h3>
+<h3>You are going to present with you {{car.brand}} {{car.model}}</h3>
+<h3>With plate number: {{car.plateNumber}}</h3>
+<button (click)="confirmBooking()">Confirm Booking</button>
+<button [routerLink]="['/drivers', idDriver]">Cancel</button>

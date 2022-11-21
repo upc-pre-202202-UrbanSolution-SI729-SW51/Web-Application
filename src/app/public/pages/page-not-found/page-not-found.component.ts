@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-page-not-found',
@@ -9,13 +9,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class PageNotFoundComponent implements OnInit {
 
   invalidUrl: string = '';
-  constructor(private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.invalidUrl = this.route.snapshot.url[0].path;
-  }
-  navigateToHome() {
-    this.router.navigate(['parking-lots']);
   }
 }
