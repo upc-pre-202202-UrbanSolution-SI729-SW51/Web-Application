@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'drivers/:idDriver/:car/:idParking/book/:idCar', component: ConfirmBookingComponent},
 
   { path: 'owners', component: OwnersComponent},
-  { path: 'owners/register', component: RegisterComponent},
+  { path: 'owners/register', component: RegisterComponent}, 
   { path: 'owners/:idOwner', component: OwnerDetailComponent},
   { path: 'owners/:idOwner/createParking', component: ParkingCreateComponent},
   { path: 'owners/:idOwner/:idParking', component: ParkingEditDeleteComponent},
@@ -43,3 +43,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
