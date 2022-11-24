@@ -10,6 +10,6 @@ export class OwnersService extends BaseService<Owner>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.basePath = 'http://localhost:3000/api/v1/owners'
+    this.basePath = 'https://json-server-deploy-12.herokuapp.com/owners'
   }
 }
