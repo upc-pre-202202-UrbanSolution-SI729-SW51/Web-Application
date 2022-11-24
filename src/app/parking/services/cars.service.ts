@@ -10,6 +10,6 @@ export class CarsService extends BaseService<Car>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.basePath = 'http://localhost:3000/api/v1/cars';
+    this.basePath = 'https://json-server-deploy-12.herokuapp.com/cars';
   }
 }
